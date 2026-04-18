@@ -1,0 +1,3282 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_feb2e1b9c683283efe109c692b529b64 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+<div style="position:fixed; bottom:30px; left:30px; z-index:1000;
+     background:white; padding:10px; border-radius:8px; border:2px solid grey">
+<b>Facility Type</b><br>
+🔴 Hospital &nbsp; 🔵 Clinic<br>
+🟢 PHC &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 🟠 CHC
+</div>
+    
+            <div class="folium-map" id="map_feb2e1b9c683283efe109c692b529b64" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_feb2e1b9c683283efe109c692b529b64 = L.map(
+                "map_feb2e1b9c683283efe109c692b529b64",
+                {
+                    center: [23.2599, 77.4126],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_083a5976feae6f2fa74d121969632c0c = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_083a5976feae6f2fa74d121969632c0c.addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+            var circle_marker_9c2d11c7a679d6bd480e188e0e45d9a2 = L.circleMarker(
+                [23.160118, 77.549821],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_5db1440b57df1853ac32af840756af12 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_109f499d9dfbe58f32394d0fd4a81f90 = $(`<div id="html_109f499d9dfbe58f32394d0fd4a81f90" style="width: 100.0%; height: 100.0%;"><b>Hospital - Shyamla Hills 1</b><br>Type: Hospital<br>Beds: 105</div>`)[0];
+                popup_5db1440b57df1853ac32af840756af12.setContent(html_109f499d9dfbe58f32394d0fd4a81f90);
+            
+        
+
+        circle_marker_9c2d11c7a679d6bd480e188e0e45d9a2.bindPopup(popup_5db1440b57df1853ac32af840756af12)
+        ;
+
+        
+    
+    
+            var circle_marker_9ecb87c693a8c1a6219e4094509941f3 = L.circleMarker(
+                [23.335273, 77.512174],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_3fa663df13154aa32617c9d7a11d56f6 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_78fea25e1000617daf4f13e722456def = $(`<div id="html_78fea25e1000617daf4f13e722456def" style="width: 100.0%; height: 100.0%;"><b>Clinic - Shyamla Hills 2</b><br>Type: Clinic<br>Beds: 2</div>`)[0];
+                popup_3fa663df13154aa32617c9d7a11d56f6.setContent(html_78fea25e1000617daf4f13e722456def);
+            
+        
+
+        circle_marker_9ecb87c693a8c1a6219e4094509941f3.bindPopup(popup_3fa663df13154aa32617c9d7a11d56f6)
+        ;
+
+        
+    
+    
+            var circle_marker_69fd600c356553f6f03e34146b430bbd = L.circleMarker(
+                [23.182927, 77.300539],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_bed29036e02ee08cdcae6ef612929b15 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_b1d0993dbc1f21943205197b83e42483 = $(`<div id="html_b1d0993dbc1f21943205197b83e42483" style="width: 100.0%; height: 100.0%;"><b>Clinic - Arera Colony 3</b><br>Type: Clinic<br>Beds: 1</div>`)[0];
+                popup_bed29036e02ee08cdcae6ef612929b15.setContent(html_b1d0993dbc1f21943205197b83e42483);
+            
+        
+
+        circle_marker_69fd600c356553f6f03e34146b430bbd.bindPopup(popup_bed29036e02ee08cdcae6ef612929b15)
+        ;
+
+        
+    
+    
+            var circle_marker_2dd3d832d1d16bccf5a561cec58b2533 = L.circleMarker(
+                [23.20705, 77.474148],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_97210077f7cf6754a48187ad69cddc02 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_490bbce0b95dce653d6fd66c58dfd6c6 = $(`<div id="html_490bbce0b95dce653d6fd66c58dfd6c6" style="width: 100.0%; height: 100.0%;"><b>CHC - Arera Colony 4</b><br>Type: CHC<br>Beds: 88</div>`)[0];
+                popup_97210077f7cf6754a48187ad69cddc02.setContent(html_490bbce0b95dce653d6fd66c58dfd6c6);
+            
+        
+
+        circle_marker_2dd3d832d1d16bccf5a561cec58b2533.bindPopup(popup_97210077f7cf6754a48187ad69cddc02)
+        ;
+
+        
+    
+    
+            var circle_marker_592d59ab3d00c3510dee7abba2d02a2b = L.circleMarker(
+                [23.261154, 77.479602],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_47ee0720c90ca2461f4a6da4d078670d = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_f751fb13a0d407070e3c0e65cc2c3c5b = $(`<div id="html_f751fb13a0d407070e3c0e65cc2c3c5b" style="width: 100.0%; height: 100.0%;"><b>Hospital - MP Nagar 5</b><br>Type: Hospital<br>Beds: 280</div>`)[0];
+                popup_47ee0720c90ca2461f4a6da4d078670d.setContent(html_f751fb13a0d407070e3c0e65cc2c3c5b);
+            
+        
+
+        circle_marker_592d59ab3d00c3510dee7abba2d02a2b.bindPopup(popup_47ee0720c90ca2461f4a6da4d078670d)
+        ;
+
+        
+    
+    
+            var circle_marker_ef87436fa46f495b8d4e9caaff655db0 = L.circleMarker(
+                [23.162192, 77.378401],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_47a719474391b9255e3e43071ac99726 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_6f9724cbf6ab2e1c9b24546db5a1c411 = $(`<div id="html_6f9724cbf6ab2e1c9b24546db5a1c411" style="width: 100.0%; height: 100.0%;"><b>CHC - MP Nagar 6</b><br>Type: CHC<br>Beds: 99</div>`)[0];
+                popup_47a719474391b9255e3e43071ac99726.setContent(html_6f9724cbf6ab2e1c9b24546db5a1c411);
+            
+        
+
+        circle_marker_ef87436fa46f495b8d4e9caaff655db0.bindPopup(popup_47a719474391b9255e3e43071ac99726)
+        ;
+
+        
+    
+    
+            var circle_marker_d03308b4e65caa0ce058622c683db185 = L.circleMarker(
+                [23.181487, 77.540195],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_c2fecefbb73d43e961ab149dae849852 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_a97942ab7b21cf8550e1a0706ce9cbaa = $(`<div id="html_a97942ab7b21cf8550e1a0706ce9cbaa" style="width: 100.0%; height: 100.0%;"><b>Clinic - New Market 7</b><br>Type: Clinic<br>Beds: 16</div>`)[0];
+                popup_c2fecefbb73d43e961ab149dae849852.setContent(html_a97942ab7b21cf8550e1a0706ce9cbaa);
+            
+        
+
+        circle_marker_d03308b4e65caa0ce058622c683db185.bindPopup(popup_c2fecefbb73d43e961ab149dae849852)
+        ;
+
+        
+    
+    
+            var circle_marker_50ee9945a7878cf8c833d9036a9cade5 = L.circleMarker(
+                [23.230755, 77.535399],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_7b17211919cd2029ee54ab845c3df118 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_f1e5f3c28853814ad7ba948de8e30358 = $(`<div id="html_f1e5f3c28853814ad7ba948de8e30358" style="width: 100.0%; height: 100.0%;"><b>Clinic - Habibganj 8</b><br>Type: Clinic<br>Beds: 7</div>`)[0];
+                popup_7b17211919cd2029ee54ab845c3df118.setContent(html_f1e5f3c28853814ad7ba948de8e30358);
+            
+        
+
+        circle_marker_50ee9945a7878cf8c833d9036a9cade5.bindPopup(popup_7b17211919cd2029ee54ab845c3df118)
+        ;
+
+        
+    
+    
+            var circle_marker_de7924c89fc468f728e8589334f596be = L.circleMarker(
+                [23.197737, 77.398946],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_cdf055e02ec85639e4c88cac9d8a5c17 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_27e1502cb70cdb4f4874a8e392f7eabc = $(`<div id="html_27e1502cb70cdb4f4874a8e392f7eabc" style="width: 100.0%; height: 100.0%;"><b>PHC - Govindpura 9</b><br>Type: PHC<br>Beds: 16</div>`)[0];
+                popup_cdf055e02ec85639e4c88cac9d8a5c17.setContent(html_27e1502cb70cdb4f4874a8e392f7eabc);
+            
+        
+
+        circle_marker_de7924c89fc468f728e8589334f596be.bindPopup(popup_cdf055e02ec85639e4c88cac9d8a5c17)
+        ;
+
+        
+    
+    
+            var circle_marker_3b950fef39f2dab19abe02a69a7aff87 = L.circleMarker(
+                [23.151863, 77.45529],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_c03de7924bea0173c5adc4437d26d119 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_42dcf12a4d50b097c8245eab0e5ad08f = $(`<div id="html_42dcf12a4d50b097c8245eab0e5ad08f" style="width: 100.0%; height: 100.0%;"><b>PHC - Berasia Road 10</b><br>Type: PHC<br>Beds: 8</div>`)[0];
+                popup_c03de7924bea0173c5adc4437d26d119.setContent(html_42dcf12a4d50b097c8245eab0e5ad08f);
+            
+        
+
+        circle_marker_3b950fef39f2dab19abe02a69a7aff87.bindPopup(popup_c03de7924bea0173c5adc4437d26d119)
+        ;
+
+        
+    
+    
+            var circle_marker_14b253f7e6306928682c80332f8a92b7 = L.circleMarker(
+                [23.20304, 77.533315],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_2d3bb49cf8c031a0904ec1ca51e9e728 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_64e808bd84fe78bf721a7a9c334deb7c = $(`<div id="html_64e808bd84fe78bf721a7a9c334deb7c" style="width: 100.0%; height: 100.0%;"><b>Clinic - Karond 11</b><br>Type: Clinic<br>Beds: 16</div>`)[0];
+                popup_2d3bb49cf8c031a0904ec1ca51e9e728.setContent(html_64e808bd84fe78bf721a7a9c334deb7c);
+            
+        
+
+        circle_marker_14b253f7e6306928682c80332f8a92b7.bindPopup(popup_2d3bb49cf8c031a0904ec1ca51e9e728)
+        ;
+
+        
+    
+    
+            var circle_marker_937c8e76e48ba25dc1535f78df59aa86 = L.circleMarker(
+                [23.223905, 77.339437],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_f298d29f66904bfea74739c4729b0678 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_621a89bee929ee877d17eeecc473bd2d = $(`<div id="html_621a89bee929ee877d17eeecc473bd2d" style="width: 100.0%; height: 100.0%;"><b>PHC - Karond 12</b><br>Type: PHC<br>Beds: 13</div>`)[0];
+                popup_f298d29f66904bfea74739c4729b0678.setContent(html_621a89bee929ee877d17eeecc473bd2d);
+            
+        
+
+        circle_marker_937c8e76e48ba25dc1535f78df59aa86.bindPopup(popup_f298d29f66904bfea74739c4729b0678)
+        ;
+
+        
+    
+    
+            var circle_marker_1fc541e70e1b98f06660479390061927 = L.circleMarker(
+                [23.272336, 77.546808],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_43e18c1fadf911435314b6888d77ed0b = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_084aeddf427712ae5629427a6dbcbcf0 = $(`<div id="html_084aeddf427712ae5629427a6dbcbcf0" style="width: 100.0%; height: 100.0%;"><b>CHC - Karond 13</b><br>Type: CHC<br>Beds: 68</div>`)[0];
+                popup_43e18c1fadf911435314b6888d77ed0b.setContent(html_084aeddf427712ae5629427a6dbcbcf0);
+            
+        
+
+        circle_marker_1fc541e70e1b98f06660479390061927.bindPopup(popup_43e18c1fadf911435314b6888d77ed0b)
+        ;
+
+        
+    
+    
+            var circle_marker_8c8162ee21ca96a8e41485fd13f9bc13 = L.circleMarker(
+                [23.283573, 77.438651],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_c55916c1431334e5a279f8876f3f81a7 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_7ae4ec8bacc47c0bcbbb6bbe88b7c0a2 = $(`<div id="html_7ae4ec8bacc47c0bcbbb6bbe88b7c0a2" style="width: 100.0%; height: 100.0%;"><b>Hospital - Nishatpura 14</b><br>Type: Hospital<br>Beds: 82</div>`)[0];
+                popup_c55916c1431334e5a279f8876f3f81a7.setContent(html_7ae4ec8bacc47c0bcbbb6bbe88b7c0a2);
+            
+        
+
+        circle_marker_8c8162ee21ca96a8e41485fd13f9bc13.bindPopup(popup_c55916c1431334e5a279f8876f3f81a7)
+        ;
+
+        
+    
+    
+            var circle_marker_f29ff09a737041b1334f44440ffd7d21 = L.circleMarker(
+                [23.337786, 77.333573],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_7ba356a7311c3196b13afecee33c1354 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_ad332bef378d4b17c0f098372c3a832a = $(`<div id="html_ad332bef378d4b17c0f098372c3a832a" style="width: 100.0%; height: 100.0%;"><b>Clinic - Nishatpura 15</b><br>Type: Clinic<br>Beds: 3</div>`)[0];
+                popup_7ba356a7311c3196b13afecee33c1354.setContent(html_ad332bef378d4b17c0f098372c3a832a);
+            
+        
+
+        circle_marker_f29ff09a737041b1334f44440ffd7d21.bindPopup(popup_7ba356a7311c3196b13afecee33c1354)
+        ;
+
+        
+    
+    
+            var circle_marker_4013f381fea6fbe612e9286e74a1dc8a = L.circleMarker(
+                [23.218576, 77.471874],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_ae9ff2b07c09f0579c2d14e273b90371 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_3a61ae0bb1e86ed2568507656b0443a0 = $(`<div id="html_3a61ae0bb1e86ed2568507656b0443a0" style="width: 100.0%; height: 100.0%;"><b>PHC - Bhanpur 16</b><br>Type: PHC<br>Beds: 28</div>`)[0];
+                popup_ae9ff2b07c09f0579c2d14e273b90371.setContent(html_3a61ae0bb1e86ed2568507656b0443a0);
+            
+        
+
+        circle_marker_4013f381fea6fbe612e9286e74a1dc8a.bindPopup(popup_ae9ff2b07c09f0579c2d14e273b90371)
+        ;
+
+        
+    
+    
+            var circle_marker_8bc33c3aea0be8db4298cc987d968fe2 = L.circleMarker(
+                [23.247706, 77.526334],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_e13faabccb379e163e80511aca1115db = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_cffd0a64425a4b06622e2ac6067cb454 = $(`<div id="html_cffd0a64425a4b06622e2ac6067cb454" style="width: 100.0%; height: 100.0%;"><b>CHC - Bhanpur 17</b><br>Type: CHC<br>Beds: 94</div>`)[0];
+                popup_e13faabccb379e163e80511aca1115db.setContent(html_cffd0a64425a4b06622e2ac6067cb454);
+            
+        
+
+        circle_marker_8bc33c3aea0be8db4298cc987d968fe2.bindPopup(popup_e13faabccb379e163e80511aca1115db)
+        ;
+
+        
+    
+    
+            var circle_marker_ea81ccee2c1766678c951af9efa8e444 = L.circleMarker(
+                [23.276857, 77.507337],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_f5877e877d2401f3a52e075766a0480f = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_578b9d058c4984138e4f18320415efa4 = $(`<div id="html_578b9d058c4984138e4f18320415efa4" style="width: 100.0%; height: 100.0%;"><b>Hospital - Katara Hills 18</b><br>Type: Hospital<br>Beds: 103</div>`)[0];
+                popup_f5877e877d2401f3a52e075766a0480f.setContent(html_578b9d058c4984138e4f18320415efa4);
+            
+        
+
+        circle_marker_ea81ccee2c1766678c951af9efa8e444.bindPopup(popup_f5877e877d2401f3a52e075766a0480f)
+        ;
+
+        
+    
+    
+            var circle_marker_71c455f6ba8bbc70d6c341cc861d193a = L.circleMarker(
+                [23.298246, 77.43792],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_eafd984496d43bb4ca69f372ba5f75aa = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_a8ed3a04c7ba42723d42feb3a84e704c = $(`<div id="html_a8ed3a04c7ba42723d42feb3a84e704c" style="width: 100.0%; height: 100.0%;"><b>Hospital - Shahpura 19</b><br>Type: Hospital<br>Beds: 121</div>`)[0];
+                popup_eafd984496d43bb4ca69f372ba5f75aa.setContent(html_a8ed3a04c7ba42723d42feb3a84e704c);
+            
+        
+
+        circle_marker_71c455f6ba8bbc70d6c341cc861d193a.bindPopup(popup_eafd984496d43bb4ca69f372ba5f75aa)
+        ;
+
+        
+    
+    
+            var circle_marker_f2737c00d55e8f352f1c85acd274d5ac = L.circleMarker(
+                [23.172375, 77.536263],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_6feacc8c96a30a768dc0778f4b58ce94 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_168a9ca734afdb1f5aa6ea72b642973f = $(`<div id="html_168a9ca734afdb1f5aa6ea72b642973f" style="width: 100.0%; height: 100.0%;"><b>Clinic - Shahpura 20</b><br>Type: Clinic<br>Beds: 0</div>`)[0];
+                popup_6feacc8c96a30a768dc0778f4b58ce94.setContent(html_168a9ca734afdb1f5aa6ea72b642973f);
+            
+        
+
+        circle_marker_f2737c00d55e8f352f1c85acd274d5ac.bindPopup(popup_6feacc8c96a30a768dc0778f4b58ce94)
+        ;
+
+        
+    
+    
+            var circle_marker_0d18d7ea616fc9dcd0d3f89de841d388 = L.circleMarker(
+                [23.259118, 77.508649],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_8ff3173826e12f2c9abd0cbd0b4b45e4 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_872635890feb59b58669011b62fbe67f = $(`<div id="html_872635890feb59b58669011b62fbe67f" style="width: 100.0%; height: 100.0%;"><b>PHC - Shahpura 21</b><br>Type: PHC<br>Beds: 10</div>`)[0];
+                popup_8ff3173826e12f2c9abd0cbd0b4b45e4.setContent(html_872635890feb59b58669011b62fbe67f);
+            
+        
+
+        circle_marker_0d18d7ea616fc9dcd0d3f89de841d388.bindPopup(popup_8ff3173826e12f2c9abd0cbd0b4b45e4)
+        ;
+
+        
+    
+    
+            var circle_marker_53da52ae0e81a46504d854365394aa65 = L.circleMarker(
+                [23.329785, 77.352519],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_7280b7bfd5657627fd5a930f1d66e356 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_e82083aaa8800d41fe2c7a581f70e32b = $(`<div id="html_e82083aaa8800d41fe2c7a581f70e32b" style="width: 100.0%; height: 100.0%;"><b>CHC - Huzur 22</b><br>Type: CHC<br>Beds: 35</div>`)[0];
+                popup_7280b7bfd5657627fd5a930f1d66e356.setContent(html_e82083aaa8800d41fe2c7a581f70e32b);
+            
+        
+
+        circle_marker_53da52ae0e81a46504d854365394aa65.bindPopup(popup_7280b7bfd5657627fd5a930f1d66e356)
+        ;
+
+        
+    
+    
+            var circle_marker_2e4928ed3c5bc5e20aedf113f74bb606 = L.circleMarker(
+                [23.344767, 77.487369],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_a3d7981da8c9eef5fc2b2013eb8b109c = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_8ea9d1e47946a8de75f91c86cdcaf5d7 = $(`<div id="html_8ea9d1e47946a8de75f91c86cdcaf5d7" style="width: 100.0%; height: 100.0%;"><b>PHC - Bhopal Tal 23</b><br>Type: PHC<br>Beds: 19</div>`)[0];
+                popup_a3d7981da8c9eef5fc2b2013eb8b109c.setContent(html_8ea9d1e47946a8de75f91c86cdcaf5d7);
+            
+        
+
+        circle_marker_2e4928ed3c5bc5e20aedf113f74bb606.bindPopup(popup_a3d7981da8c9eef5fc2b2013eb8b109c)
+        ;
+
+        
+    
+    
+            var circle_marker_1c45a0b1211192df63b01be5c2f61c40 = L.circleMarker(
+                [23.322921, 77.544052],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_2c294c927a812619fb062c41e863fe9c = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_e8651a507180f2955d5b75f50d5d98a0 = $(`<div id="html_e8651a507180f2955d5b75f50d5d98a0" style="width: 100.0%; height: 100.0%;"><b>CHC - Bhopal Tal 24</b><br>Type: CHC<br>Beds: 60</div>`)[0];
+                popup_2c294c927a812619fb062c41e863fe9c.setContent(html_e8651a507180f2955d5b75f50d5d98a0);
+            
+        
+
+        circle_marker_1c45a0b1211192df63b01be5c2f61c40.bindPopup(popup_2c294c927a812619fb062c41e863fe9c)
+        ;
+
+        
+    
+    
+            var circle_marker_9dbbb742f6bf4bf8c85a8c6220aea549 = L.circleMarker(
+                [23.154957, 77.484141],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_871c1c0455b5c091d95a1cc702e08764 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_c15c50f1cb563ab19af794dc3e0cda06 = $(`<div id="html_c15c50f1cb563ab19af794dc3e0cda06" style="width: 100.0%; height: 100.0%;"><b>Hospital - Mangalwara 25</b><br>Type: Hospital<br>Beds: 185</div>`)[0];
+                popup_871c1c0455b5c091d95a1cc702e08764.setContent(html_c15c50f1cb563ab19af794dc3e0cda06);
+            
+        
+
+        circle_marker_9dbbb742f6bf4bf8c85a8c6220aea549.bindPopup(popup_871c1c0455b5c091d95a1cc702e08764)
+        ;
+
+        
+    
+    
+            var circle_marker_6517ef6ef5783e2ee496f71ef09c857f = L.circleMarker(
+                [23.322813, 77.502687],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_942f0e7089f835c733bfbf6053fd9bed = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_104febcc62106057cad1608de81a043f = $(`<div id="html_104febcc62106057cad1608de81a043f" style="width: 100.0%; height: 100.0%;"><b>PHC - Mangalwara 26</b><br>Type: PHC<br>Beds: 27</div>`)[0];
+                popup_942f0e7089f835c733bfbf6053fd9bed.setContent(html_104febcc62106057cad1608de81a043f);
+            
+        
+
+        circle_marker_6517ef6ef5783e2ee496f71ef09c857f.bindPopup(popup_942f0e7089f835c733bfbf6053fd9bed)
+        ;
+
+        
+    
+    
+            var circle_marker_141e4daa76c78cddeaeef040b84af604 = L.circleMarker(
+                [23.226508, 77.309681],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_4e47933475f6cd2a26313594951e7509 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_0adc95e75e031cd6a0a40ae1a42e8f1d = $(`<div id="html_0adc95e75e031cd6a0a40ae1a42e8f1d" style="width: 100.0%; height: 100.0%;"><b>Hospital - Shiv Nagar 27</b><br>Type: Hospital<br>Beds: 107</div>`)[0];
+                popup_4e47933475f6cd2a26313594951e7509.setContent(html_0adc95e75e031cd6a0a40ae1a42e8f1d);
+            
+        
+
+        circle_marker_141e4daa76c78cddeaeef040b84af604.bindPopup(popup_4e47933475f6cd2a26313594951e7509)
+        ;
+
+        
+    
+    
+            var circle_marker_1a2aeb874e41f00e1ddaaa832a0a4b2e = L.circleMarker(
+                [23.313317, 77.415076],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_2117531dbeed767f88fee4a72dcf975c = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_dcd5371451fe9b3f88a35896d742ba22 = $(`<div id="html_dcd5371451fe9b3f88a35896d742ba22" style="width: 100.0%; height: 100.0%;"><b>Clinic - Shiv Nagar 28</b><br>Type: Clinic<br>Beds: 6</div>`)[0];
+                popup_2117531dbeed767f88fee4a72dcf975c.setContent(html_dcd5371451fe9b3f88a35896d742ba22);
+            
+        
+
+        circle_marker_1a2aeb874e41f00e1ddaaa832a0a4b2e.bindPopup(popup_2117531dbeed767f88fee4a72dcf975c)
+        ;
+
+        
+    
+    
+            var circle_marker_7e196d60c0321e82c889cf800f153a7d = L.circleMarker(
+                [23.194585, 77.465008],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_a5cfbe196ac5266f93aebe8f9dd0cca0 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_a13595b2008b0a2af2fad7223edb01e2 = $(`<div id="html_a13595b2008b0a2af2fad7223edb01e2" style="width: 100.0%; height: 100.0%;"><b>CHC - Shiv Nagar 29</b><br>Type: CHC<br>Beds: 59</div>`)[0];
+                popup_a5cfbe196ac5266f93aebe8f9dd0cca0.setContent(html_a13595b2008b0a2af2fad7223edb01e2);
+            
+        
+
+        circle_marker_7e196d60c0321e82c889cf800f153a7d.bindPopup(popup_a5cfbe196ac5266f93aebe8f9dd0cca0)
+        ;
+
+        
+    
+    
+            var circle_marker_62d9f83e96cbd594d2a616722371408e = L.circleMarker(
+                [23.278296, 77.39992],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_5f46f548c2555c7a8afa56a357c9617c = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_3655059c5082808e8c57cdf75eafc5c1 = $(`<div id="html_3655059c5082808e8c57cdf75eafc5c1" style="width: 100.0%; height: 100.0%;"><b>CHC - Peer Gate 30</b><br>Type: CHC<br>Beds: 74</div>`)[0];
+                popup_5f46f548c2555c7a8afa56a357c9617c.setContent(html_3655059c5082808e8c57cdf75eafc5c1);
+            
+        
+
+        circle_marker_62d9f83e96cbd594d2a616722371408e.bindPopup(popup_5f46f548c2555c7a8afa56a357c9617c)
+        ;
+
+        
+    
+    
+            var circle_marker_84df02b77e0f093307373bcfe87cdf19 = L.circleMarker(
+                [23.21623, 77.3069],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_692319b15a472820cfcaabf6e4793c89 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_c1b8399d0fd39b6077980286d00f6a26 = $(`<div id="html_c1b8399d0fd39b6077980286d00f6a26" style="width: 100.0%; height: 100.0%;"><b>Hospital - Ibtedai 31</b><br>Type: Hospital<br>Beds: 217</div>`)[0];
+                popup_692319b15a472820cfcaabf6e4793c89.setContent(html_c1b8399d0fd39b6077980286d00f6a26);
+            
+        
+
+        circle_marker_84df02b77e0f093307373bcfe87cdf19.bindPopup(popup_692319b15a472820cfcaabf6e4793c89)
+        ;
+
+        
+    
+    
+            var circle_marker_583acdb825fff029a15f94ee6670d0bc = L.circleMarker(
+                [23.185714, 77.540634],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_3d4dced24fedf52697d4acfc073dee79 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_2bb91bb0d686fd6b4bd88260b1745f4e = $(`<div id="html_2bb91bb0d686fd6b4bd88260b1745f4e" style="width: 100.0%; height: 100.0%;"><b>Clinic - Ibtedai 32</b><br>Type: Clinic<br>Beds: 8</div>`)[0];
+                popup_3d4dced24fedf52697d4acfc073dee79.setContent(html_2bb91bb0d686fd6b4bd88260b1745f4e);
+            
+        
+
+        circle_marker_583acdb825fff029a15f94ee6670d0bc.bindPopup(popup_3d4dced24fedf52697d4acfc073dee79)
+        ;
+
+        
+    
+    
+            var circle_marker_d7c221086ebdc6dc021c65d3760020a7 = L.circleMarker(
+                [23.237279, 77.546059],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_c1d7f799672741244f438e7703bf6a78 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_9362b58ec341971e50b10ca2fbf79690 = $(`<div id="html_9362b58ec341971e50b10ca2fbf79690" style="width: 100.0%; height: 100.0%;"><b>Clinic - Jumerati 33</b><br>Type: Clinic<br>Beds: 10</div>`)[0];
+                popup_c1d7f799672741244f438e7703bf6a78.setContent(html_9362b58ec341971e50b10ca2fbf79690);
+            
+        
+
+        circle_marker_d7c221086ebdc6dc021c65d3760020a7.bindPopup(popup_c1d7f799672741244f438e7703bf6a78)
+        ;
+
+        
+    
+    
+            var circle_marker_55f47edbb0059818399e188f3ef79c13 = L.circleMarker(
+                [23.200945, 77.477196],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_4c4dced0081a3d785bf0c044cd43497a = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_382f6348515034dffb6bd5b946945f3f = $(`<div id="html_382f6348515034dffb6bd5b946945f3f" style="width: 100.0%; height: 100.0%;"><b>CHC - Jumerati 34</b><br>Type: CHC<br>Beds: 54</div>`)[0];
+                popup_4c4dced0081a3d785bf0c044cd43497a.setContent(html_382f6348515034dffb6bd5b946945f3f);
+            
+        
+
+        circle_marker_55f47edbb0059818399e188f3ef79c13.bindPopup(popup_4c4dced0081a3d785bf0c044cd43497a)
+        ;
+
+        
+    
+    
+            var circle_marker_13180d352344113f400f9c245c9d6de5 = L.circleMarker(
+                [23.287371, 77.535066],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_71491616599a1a920fe8fd10860781c5 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_a1089da3534594589cb4b5604be34148 = $(`<div id="html_a1089da3534594589cb4b5604be34148" style="width: 100.0%; height: 100.0%;"><b>Clinic - Budhwara 35</b><br>Type: Clinic<br>Beds: 17</div>`)[0];
+                popup_71491616599a1a920fe8fd10860781c5.setContent(html_a1089da3534594589cb4b5604be34148);
+            
+        
+
+        circle_marker_13180d352344113f400f9c245c9d6de5.bindPopup(popup_71491616599a1a920fe8fd10860781c5)
+        ;
+
+        
+    
+    
+            var circle_marker_e6c706971fcc8f7569dd1f590bad758b = L.circleMarker(
+                [23.222844, 77.317493],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_83ed3717d9a3fe4367777f6db18da4da = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_3ebe6e2e0d1abda8a0109b106a744ec8 = $(`<div id="html_3ebe6e2e0d1abda8a0109b106a744ec8" style="width: 100.0%; height: 100.0%;"><b>PHC - Budhwara 36</b><br>Type: PHC<br>Beds: 12</div>`)[0];
+                popup_83ed3717d9a3fe4367777f6db18da4da.setContent(html_3ebe6e2e0d1abda8a0109b106a744ec8);
+            
+        
+
+        circle_marker_e6c706971fcc8f7569dd1f590bad758b.bindPopup(popup_83ed3717d9a3fe4367777f6db18da4da)
+        ;
+
+        
+    
+    
+            var circle_marker_7ed75af75488c82d16d0efa8dc67cb53 = L.circleMarker(
+                [23.330009, 77.426781],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_2b77aedc2077c5855609d3cc9fd87fe7 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_10677cbaed71a1b86d0cfb79209fd7d0 = $(`<div id="html_10677cbaed71a1b86d0cfb79209fd7d0" style="width: 100.0%; height: 100.0%;"><b>PHC - Char Imli 37</b><br>Type: PHC<br>Beds: 29</div>`)[0];
+                popup_2b77aedc2077c5855609d3cc9fd87fe7.setContent(html_10677cbaed71a1b86d0cfb79209fd7d0);
+            
+        
+
+        circle_marker_7ed75af75488c82d16d0efa8dc67cb53.bindPopup(popup_2b77aedc2077c5855609d3cc9fd87fe7)
+        ;
+
+        
+    
+    
+            var circle_marker_cabfb390fa00316581bc27f3283e8661 = L.circleMarker(
+                [23.175458, 77.405112],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_2341c747c2522215f78b0b77e239bd60 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_e096d907452f74aa3bbe01059458bd2e = $(`<div id="html_e096d907452f74aa3bbe01059458bd2e" style="width: 100.0%; height: 100.0%;"><b>Clinic - Kasturba Nagar 38</b><br>Type: Clinic<br>Beds: 17</div>`)[0];
+                popup_2341c747c2522215f78b0b77e239bd60.setContent(html_e096d907452f74aa3bbe01059458bd2e);
+            
+        
+
+        circle_marker_cabfb390fa00316581bc27f3283e8661.bindPopup(popup_2341c747c2522215f78b0b77e239bd60)
+        ;
+
+        
+    
+    
+            var circle_marker_cdca5038d361f78a7a9935f7363fd595 = L.circleMarker(
+                [23.299627, 77.343507],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_22990cab2b5e428ea09530a10238848a = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_320c0f61ae86299b2230ef2a397d8211 = $(`<div id="html_320c0f61ae86299b2230ef2a397d8211" style="width: 100.0%; height: 100.0%;"><b>PHC - Kasturba Nagar 39</b><br>Type: PHC<br>Beds: 27</div>`)[0];
+                popup_22990cab2b5e428ea09530a10238848a.setContent(html_320c0f61ae86299b2230ef2a397d8211);
+            
+        
+
+        circle_marker_cdca5038d361f78a7a9935f7363fd595.bindPopup(popup_22990cab2b5e428ea09530a10238848a)
+        ;
+
+        
+    
+    
+            var circle_marker_a35fdcec5a8fd122164c852be258105f = L.circleMarker(
+                [23.207383, 77.407472],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_594407b2ef318a6c0529b35769650f4f = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_5aa84929f15586123bf1217efd3609cd = $(`<div id="html_5aa84929f15586123bf1217efd3609cd" style="width: 100.0%; height: 100.0%;"><b>Clinic - Bairagarh 40</b><br>Type: Clinic<br>Beds: 9</div>`)[0];
+                popup_594407b2ef318a6c0529b35769650f4f.setContent(html_5aa84929f15586123bf1217efd3609cd);
+            
+        
+
+        circle_marker_a35fdcec5a8fd122164c852be258105f.bindPopup(popup_594407b2ef318a6c0529b35769650f4f)
+        ;
+
+        
+    
+    
+            var circle_marker_196cbdf36e1c5e1d2bf4a55096ee8a38 = L.circleMarker(
+                [23.21445, 77.410447],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_871f3a87939b4d9f17d25a83f3c30db5 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_ba1bae953b621e5722c8bc048ed03894 = $(`<div id="html_ba1bae953b621e5722c8bc048ed03894" style="width: 100.0%; height: 100.0%;"><b>PHC - Bairagarh 41</b><br>Type: PHC<br>Beds: 26</div>`)[0];
+                popup_871f3a87939b4d9f17d25a83f3c30db5.setContent(html_ba1bae953b621e5722c8bc048ed03894);
+            
+        
+
+        circle_marker_196cbdf36e1c5e1d2bf4a55096ee8a38.bindPopup(popup_871f3a87939b4d9f17d25a83f3c30db5)
+        ;
+
+        
+    
+    
+            var circle_marker_6ff31bfe679d75ca8a68599a378d999e = L.circleMarker(
+                [23.28177, 77.370947],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_f94f7a99d372e06c3302469e065c91c2 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_3600b19d232b2c15f2ab4e5630ee1c49 = $(`<div id="html_3600b19d232b2c15f2ab4e5630ee1c49" style="width: 100.0%; height: 100.0%;"><b>Clinic - Indrapuri 42</b><br>Type: Clinic<br>Beds: 5</div>`)[0];
+                popup_f94f7a99d372e06c3302469e065c91c2.setContent(html_3600b19d232b2c15f2ab4e5630ee1c49);
+            
+        
+
+        circle_marker_6ff31bfe679d75ca8a68599a378d999e.bindPopup(popup_f94f7a99d372e06c3302469e065c91c2)
+        ;
+
+        
+    
+    
+            var circle_marker_c5feb18b2ebc86c55dcc7158ce80ffd1 = L.circleMarker(
+                [23.284559, 77.35616],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_6e123bb8c4eaa1cdaf82f46145469fb2 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_67b6aa160d10ff7ceb379706f213fd75 = $(`<div id="html_67b6aa160d10ff7ceb379706f213fd75" style="width: 100.0%; height: 100.0%;"><b>Clinic - Nehru Nagar 43</b><br>Type: Clinic<br>Beds: 7</div>`)[0];
+                popup_6e123bb8c4eaa1cdaf82f46145469fb2.setContent(html_67b6aa160d10ff7ceb379706f213fd75);
+            
+        
+
+        circle_marker_c5feb18b2ebc86c55dcc7158ce80ffd1.bindPopup(popup_6e123bb8c4eaa1cdaf82f46145469fb2)
+        ;
+
+        
+    
+    
+            var circle_marker_6a3f2ce47ae8a1c720faf3ff7267b193 = L.circleMarker(
+                [23.241083, 77.521534],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_6d1449734c4a1a2673e8b9d196499af7 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_fd10c4cb42a9369ec11185a1bc92a417 = $(`<div id="html_fd10c4cb42a9369ec11185a1bc92a417" style="width: 100.0%; height: 100.0%;"><b>Clinic - Ashoka Garden 44</b><br>Type: Clinic<br>Beds: 2</div>`)[0];
+                popup_6d1449734c4a1a2673e8b9d196499af7.setContent(html_fd10c4cb42a9369ec11185a1bc92a417);
+            
+        
+
+        circle_marker_6a3f2ce47ae8a1c720faf3ff7267b193.bindPopup(popup_6d1449734c4a1a2673e8b9d196499af7)
+        ;
+
+        
+    
+    
+            var circle_marker_b093a6ef4fe7e89caab2e6d739db18df = L.circleMarker(
+                [23.248875, 77.360996],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_753025efa31cbee05ee3a008fb05ba64 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_37fefef8eb29b0cccc224c7fb4a5f0d8 = $(`<div id="html_37fefef8eb29b0cccc224c7fb4a5f0d8" style="width: 100.0%; height: 100.0%;"><b>CHC - Ashoka Garden 45</b><br>Type: CHC<br>Beds: 79</div>`)[0];
+                popup_753025efa31cbee05ee3a008fb05ba64.setContent(html_37fefef8eb29b0cccc224c7fb4a5f0d8);
+            
+        
+
+        circle_marker_b093a6ef4fe7e89caab2e6d739db18df.bindPopup(popup_753025efa31cbee05ee3a008fb05ba64)
+        ;
+
+        
+    
+    
+            var circle_marker_2f80d46e23528b636a821e43ab42b094 = L.circleMarker(
+                [23.328532, 77.51511],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_228e0709cdaa625f08ee14348ae73e8b = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_f9de770a51add268d506a2af2066a649 = $(`<div id="html_f9de770a51add268d506a2af2066a649" style="width: 100.0%; height: 100.0%;"><b>Hospital - Gulmohar 46</b><br>Type: Hospital<br>Beds: 81</div>`)[0];
+                popup_228e0709cdaa625f08ee14348ae73e8b.setContent(html_f9de770a51add268d506a2af2066a649);
+            
+        
+
+        circle_marker_2f80d46e23528b636a821e43ab42b094.bindPopup(popup_228e0709cdaa625f08ee14348ae73e8b)
+        ;
+
+        
+    
+    
+            var circle_marker_ae4fd0ff8779f4f970a8ffac1283f997 = L.circleMarker(
+                [23.193768, 77.501027],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_ed545684ac890ee7a84e9dbbb8c009d2 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_b3e8deeeab10410b4c470faff0accfe1 = $(`<div id="html_b3e8deeeab10410b4c470faff0accfe1" style="width: 100.0%; height: 100.0%;"><b>Clinic - Gulmohar 47</b><br>Type: Clinic<br>Beds: 13</div>`)[0];
+                popup_ed545684ac890ee7a84e9dbbb8c009d2.setContent(html_b3e8deeeab10410b4c470faff0accfe1);
+            
+        
+
+        circle_marker_ae4fd0ff8779f4f970a8ffac1283f997.bindPopup(popup_ed545684ac890ee7a84e9dbbb8c009d2)
+        ;
+
+        
+    
+    
+            var circle_marker_0c6939cdc1ca31da1dcc73c95ff7ede1 = L.circleMarker(
+                [23.160044, 77.3623],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_7ed09bc98bf7947f8d97ddad2aa639c0 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_915606575219fc82d31d978c9d7a5810 = $(`<div id="html_915606575219fc82d31d978c9d7a5810" style="width: 100.0%; height: 100.0%;"><b>PHC - Gulmohar 48</b><br>Type: PHC<br>Beds: 20</div>`)[0];
+                popup_7ed09bc98bf7947f8d97ddad2aa639c0.setContent(html_915606575219fc82d31d978c9d7a5810);
+            
+        
+
+        circle_marker_0c6939cdc1ca31da1dcc73c95ff7ede1.bindPopup(popup_7ed09bc98bf7947f8d97ddad2aa639c0)
+        ;
+
+        
+    
+    
+            var circle_marker_b96d75e8157ec619cfb5bbee625693ab = L.circleMarker(
+                [23.176668, 77.416161],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_97816b88d4b712d7de4f7140874067aa = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_be5cda0d4ee2e0a79f0ec28b5819e43a = $(`<div id="html_be5cda0d4ee2e0a79f0ec28b5819e43a" style="width: 100.0%; height: 100.0%;"><b>CHC - Gulmohar 49</b><br>Type: CHC<br>Beds: 88</div>`)[0];
+                popup_97816b88d4b712d7de4f7140874067aa.setContent(html_be5cda0d4ee2e0a79f0ec28b5819e43a);
+            
+        
+
+        circle_marker_b96d75e8157ec619cfb5bbee625693ab.bindPopup(popup_97816b88d4b712d7de4f7140874067aa)
+        ;
+
+        
+    
+    
+            var circle_marker_45c37cb579ae70231e35a7438f2cfa7e = L.circleMarker(
+                [23.340008, 77.522856],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_ac520ee11c842cd3532d836cc34c892e = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_68b112cf722ee43a2fe0542b6bd2a615 = $(`<div id="html_68b112cf722ee43a2fe0542b6bd2a615" style="width: 100.0%; height: 100.0%;"><b>Clinic - Saket Nagar 50</b><br>Type: Clinic<br>Beds: 10</div>`)[0];
+                popup_ac520ee11c842cd3532d836cc34c892e.setContent(html_68b112cf722ee43a2fe0542b6bd2a615);
+            
+        
+
+        circle_marker_45c37cb579ae70231e35a7438f2cfa7e.bindPopup(popup_ac520ee11c842cd3532d836cc34c892e)
+        ;
+
+        
+    
+    
+            var circle_marker_5e29a2017d7f5014915f5efd373c8153 = L.circleMarker(
+                [23.235348, 77.526714],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_44493407ca02663d892230779e706178 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_7f74a22f4a01657fe2050b31198c7293 = $(`<div id="html_7f74a22f4a01657fe2050b31198c7293" style="width: 100.0%; height: 100.0%;"><b>CHC - Saket Nagar 51</b><br>Type: CHC<br>Beds: 94</div>`)[0];
+                popup_44493407ca02663d892230779e706178.setContent(html_7f74a22f4a01657fe2050b31198c7293);
+            
+        
+
+        circle_marker_5e29a2017d7f5014915f5efd373c8153.bindPopup(popup_44493407ca02663d892230779e706178)
+        ;
+
+        
+    
+    
+            var circle_marker_e738384da2cbd355f88c8d840efdad45 = L.circleMarker(
+                [23.201838, 77.36181],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_ef85a402549139d4b129a0a94508433f = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_2f31b1ff3984e33ddba4e19e2139179a = $(`<div id="html_2f31b1ff3984e33ddba4e19e2139179a" style="width: 100.0%; height: 100.0%;"><b>PHC - Piplani 52</b><br>Type: PHC<br>Beds: 20</div>`)[0];
+                popup_ef85a402549139d4b129a0a94508433f.setContent(html_2f31b1ff3984e33ddba4e19e2139179a);
+            
+        
+
+        circle_marker_e738384da2cbd355f88c8d840efdad45.bindPopup(popup_ef85a402549139d4b129a0a94508433f)
+        ;
+
+        
+    
+    
+            var circle_marker_4dec97d722c2dcfc6fb13ee07709df70 = L.circleMarker(
+                [23.246919, 77.359811],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_ab66bea858b2403d7144614957c73a47 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_c487f0fa335054b4525d4008534ab9d9 = $(`<div id="html_c487f0fa335054b4525d4008534ab9d9" style="width: 100.0%; height: 100.0%;"><b>Hospital - Ayodhya Bypass 53</b><br>Type: Hospital<br>Beds: 213</div>`)[0];
+                popup_ab66bea858b2403d7144614957c73a47.setContent(html_c487f0fa335054b4525d4008534ab9d9);
+            
+        
+
+        circle_marker_4dec97d722c2dcfc6fb13ee07709df70.bindPopup(popup_ab66bea858b2403d7144614957c73a47)
+        ;
+
+        
+    
+    
+            var circle_marker_5cc1150478205aed2271b39994357406 = L.circleMarker(
+                [23.196899, 77.383962],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_1212582035219cf61f184873dfdf382b = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_1a65e197aa961914c082494d99ccd254 = $(`<div id="html_1a65e197aa961914c082494d99ccd254" style="width: 100.0%; height: 100.0%;"><b>Clinic - Ayodhya Bypass 54</b><br>Type: Clinic<br>Beds: 9</div>`)[0];
+                popup_1212582035219cf61f184873dfdf382b.setContent(html_1a65e197aa961914c082494d99ccd254);
+            
+        
+
+        circle_marker_5cc1150478205aed2271b39994357406.bindPopup(popup_1212582035219cf61f184873dfdf382b)
+        ;
+
+        
+    
+    
+            var circle_marker_8dc295e088dc26468f5fb9de93626e55 = L.circleMarker(
+                [23.177675, 77.357815],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_5c07ebd750100d35426a846ab97bd1ac = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_b62b2d07bcf031d5a05dcbc3bc75580e = $(`<div id="html_b62b2d07bcf031d5a05dcbc3bc75580e" style="width: 100.0%; height: 100.0%;"><b>PHC - Ayodhya Bypass 55</b><br>Type: PHC<br>Beds: 8</div>`)[0];
+                popup_5c07ebd750100d35426a846ab97bd1ac.setContent(html_b62b2d07bcf031d5a05dcbc3bc75580e);
+            
+        
+
+        circle_marker_8dc295e088dc26468f5fb9de93626e55.bindPopup(popup_5c07ebd750100d35426a846ab97bd1ac)
+        ;
+
+        
+    
+    
+            var circle_marker_efea157ba5384fb6067570380b2843f7 = L.circleMarker(
+                [23.232974, 77.38272],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_b386d031e8d6f312dc792e3ed8294194 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_1d19ade38ce44e2e89f6d6d05e94f4e5 = $(`<div id="html_1d19ade38ce44e2e89f6d6d05e94f4e5" style="width: 100.0%; height: 100.0%;"><b>Hospital - Chunabhatti 56</b><br>Type: Hospital<br>Beds: 96</div>`)[0];
+                popup_b386d031e8d6f312dc792e3ed8294194.setContent(html_1d19ade38ce44e2e89f6d6d05e94f4e5);
+            
+        
+
+        circle_marker_efea157ba5384fb6067570380b2843f7.bindPopup(popup_b386d031e8d6f312dc792e3ed8294194)
+        ;
+
+        
+    
+    
+            var circle_marker_b48aba8419088013b22d94435f5ab025 = L.circleMarker(
+                [23.191367, 77.405036],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_564d122c0ac66cfeba65eda2d632a27e = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_6744a8b43977c07a801d52bbc2287a07 = $(`<div id="html_6744a8b43977c07a801d52bbc2287a07" style="width: 100.0%; height: 100.0%;"><b>Clinic - Chunabhatti 57</b><br>Type: Clinic<br>Beds: 1</div>`)[0];
+                popup_564d122c0ac66cfeba65eda2d632a27e.setContent(html_6744a8b43977c07a801d52bbc2287a07);
+            
+        
+
+        circle_marker_b48aba8419088013b22d94435f5ab025.bindPopup(popup_564d122c0ac66cfeba65eda2d632a27e)
+        ;
+
+        
+    
+    
+            var circle_marker_c5a7b745263ab59cfc4e4ec0e6c02261 = L.circleMarker(
+                [23.339212, 77.304883],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_7dd2c0c6a5b82de8f6fa2c4b67ed2d9d = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_1a84e84f0df70638120ad9c63bba2391 = $(`<div id="html_1a84e84f0df70638120ad9c63bba2391" style="width: 100.0%; height: 100.0%;"><b>PHC - Chunabhatti 58</b><br>Type: PHC<br>Beds: 24</div>`)[0];
+                popup_7dd2c0c6a5b82de8f6fa2c4b67ed2d9d.setContent(html_1a84e84f0df70638120ad9c63bba2391);
+            
+        
+
+        circle_marker_c5a7b745263ab59cfc4e4ec0e6c02261.bindPopup(popup_7dd2c0c6a5b82de8f6fa2c4b67ed2d9d)
+        ;
+
+        
+    
+    
+            var circle_marker_f7eb05eda58d67d57247fea34d91051c = L.circleMarker(
+                [23.245396, 77.535685],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_6cd46688537938622d0163567b6516eb = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_ed8152cadc2d93bdb4f297d24077b324 = $(`<div id="html_ed8152cadc2d93bdb4f297d24077b324" style="width: 100.0%; height: 100.0%;"><b>CHC - Chunabhatti 59</b><br>Type: CHC<br>Beds: 78</div>`)[0];
+                popup_6cd46688537938622d0163567b6516eb.setContent(html_ed8152cadc2d93bdb4f297d24077b324);
+            
+        
+
+        circle_marker_f7eb05eda58d67d57247fea34d91051c.bindPopup(popup_6cd46688537938622d0163567b6516eb)
+        ;
+
+        
+    
+    
+            var circle_marker_4ff248e0398e389a83d2547915cd94f9 = L.circleMarker(
+                [23.257644, 77.483659],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_4fa0544624cbcc86bf4e6ee256311dc9 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_c8214be38dc83c3c173d115a6d59053d = $(`<div id="html_c8214be38dc83c3c173d115a6d59053d" style="width: 100.0%; height: 100.0%;"><b>PHC - Misrod 60</b><br>Type: PHC<br>Beds: 19</div>`)[0];
+                popup_4fa0544624cbcc86bf4e6ee256311dc9.setContent(html_c8214be38dc83c3c173d115a6d59053d);
+            
+        
+
+        circle_marker_4ff248e0398e389a83d2547915cd94f9.bindPopup(popup_4fa0544624cbcc86bf4e6ee256311dc9)
+        ;
+
+        
+    
+    
+            var circle_marker_457b0257edebecb4a71b3a10610a09e9 = L.circleMarker(
+                [23.247646, 77.368234],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_a2bbd6c5c432a7b35ee546fe6cfbc952 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_95b0c3dabd23fe9dc2bf54299d106814 = $(`<div id="html_95b0c3dabd23fe9dc2bf54299d106814" style="width: 100.0%; height: 100.0%;"><b>CHC - Misrod 61</b><br>Type: CHC<br>Beds: 58</div>`)[0];
+                popup_a2bbd6c5c432a7b35ee546fe6cfbc952.setContent(html_95b0c3dabd23fe9dc2bf54299d106814);
+            
+        
+
+        circle_marker_457b0257edebecb4a71b3a10610a09e9.bindPopup(popup_a2bbd6c5c432a7b35ee546fe6cfbc952)
+        ;
+
+        
+    
+    
+            var circle_marker_ec0c4bb5ed52d25aab8899b34fe68543 = L.circleMarker(
+                [23.294836, 77.510126],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_425582dd50aed1b94ea8d0dd82124550 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_1a564c26fc6bd7248324ea8ae4cb4ee6 = $(`<div id="html_1a564c26fc6bd7248324ea8ae4cb4ee6" style="width: 100.0%; height: 100.0%;"><b>PHC - Ratibad 62</b><br>Type: PHC<br>Beds: 18</div>`)[0];
+                popup_425582dd50aed1b94ea8d0dd82124550.setContent(html_1a564c26fc6bd7248324ea8ae4cb4ee6);
+            
+        
+
+        circle_marker_ec0c4bb5ed52d25aab8899b34fe68543.bindPopup(popup_425582dd50aed1b94ea8d0dd82124550)
+        ;
+
+        
+    
+    
+            var circle_marker_ae27f8855a2af3f16bca429c53b7d95d = L.circleMarker(
+                [23.155393, 77.398505],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_036fcec889b14b4fc1f4efed36e32762 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_500188437773ea7f0eb088635aaeb8a8 = $(`<div id="html_500188437773ea7f0eb088635aaeb8a8" style="width: 100.0%; height: 100.0%;"><b>CHC - Ratibad 63</b><br>Type: CHC<br>Beds: 98</div>`)[0];
+                popup_036fcec889b14b4fc1f4efed36e32762.setContent(html_500188437773ea7f0eb088635aaeb8a8);
+            
+        
+
+        circle_marker_ae27f8855a2af3f16bca429c53b7d95d.bindPopup(popup_036fcec889b14b4fc1f4efed36e32762)
+        ;
+
+        
+    
+    
+            var circle_marker_82e57e0c6aa85ed2531a1a9a49099942 = L.circleMarker(
+                [23.205651, 77.537801],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_1258c3ea9f8bf978b708491672296072 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_4bd54869890d94b488467d35a5aa7bdd = $(`<div id="html_4bd54869890d94b488467d35a5aa7bdd" style="width: 100.0%; height: 100.0%;"><b>Clinic - Khajuri Kalan 64</b><br>Type: Clinic<br>Beds: 12</div>`)[0];
+                popup_1258c3ea9f8bf978b708491672296072.setContent(html_4bd54869890d94b488467d35a5aa7bdd);
+            
+        
+
+        circle_marker_82e57e0c6aa85ed2531a1a9a49099942.bindPopup(popup_1258c3ea9f8bf978b708491672296072)
+        ;
+
+        
+    
+    
+            var circle_marker_687d7f9d5b5fbe03e2e3a72ac2669340 = L.circleMarker(
+                [23.153877, 77.434855],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_1caba7cdcea025613175deb57bcbacb2 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_626196785f842b6b8d19a331978ba4f7 = $(`<div id="html_626196785f842b6b8d19a331978ba4f7" style="width: 100.0%; height: 100.0%;"><b>CHC - Khajuri Kalan 65</b><br>Type: CHC<br>Beds: 90</div>`)[0];
+                popup_1caba7cdcea025613175deb57bcbacb2.setContent(html_626196785f842b6b8d19a331978ba4f7);
+            
+        
+
+        circle_marker_687d7f9d5b5fbe03e2e3a72ac2669340.bindPopup(popup_1caba7cdcea025613175deb57bcbacb2)
+        ;
+
+        
+    
+    
+            var circle_marker_c5d0af00300111393feaa3b11840e5e2 = L.circleMarker(
+                [23.194844, 77.317155],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_fe61943b5daa9caf89ab8cd794b39f31 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_e00a2bde00c60d84f5bef2e3cf5db03b = $(`<div id="html_e00a2bde00c60d84f5bef2e3cf5db03b" style="width: 100.0%; height: 100.0%;"><b>Hospital - Phanda 66</b><br>Type: Hospital<br>Beds: 169</div>`)[0];
+                popup_fe61943b5daa9caf89ab8cd794b39f31.setContent(html_e00a2bde00c60d84f5bef2e3cf5db03b);
+            
+        
+
+        circle_marker_c5d0af00300111393feaa3b11840e5e2.bindPopup(popup_fe61943b5daa9caf89ab8cd794b39f31)
+        ;
+
+        
+    
+    
+            var circle_marker_1d67ab7bf8a1ce3e94c895d326141103 = L.circleMarker(
+                [23.300847, 77.537403],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_4ec4ceb9e4e576b84063b3621311e712 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_186ed56ad44114b14b26bc29291cace5 = $(`<div id="html_186ed56ad44114b14b26bc29291cace5" style="width: 100.0%; height: 100.0%;"><b>Clinic - Phanda 67</b><br>Type: Clinic<br>Beds: 1</div>`)[0];
+                popup_4ec4ceb9e4e576b84063b3621311e712.setContent(html_186ed56ad44114b14b26bc29291cace5);
+            
+        
+
+        circle_marker_1d67ab7bf8a1ce3e94c895d326141103.bindPopup(popup_4ec4ceb9e4e576b84063b3621311e712)
+        ;
+
+        
+    
+    
+            var circle_marker_040ab7b596db37c036dd1b399871d302 = L.circleMarker(
+                [23.339551, 77.416258],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_1629b3ce18b42a43e8094ac1594fe47e = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_8c17a0533292d3905cc2e240249ec464 = $(`<div id="html_8c17a0533292d3905cc2e240249ec464" style="width: 100.0%; height: 100.0%;"><b>PHC - Berasia 68</b><br>Type: PHC<br>Beds: 24</div>`)[0];
+                popup_1629b3ce18b42a43e8094ac1594fe47e.setContent(html_8c17a0533292d3905cc2e240249ec464);
+            
+        
+
+        circle_marker_040ab7b596db37c036dd1b399871d302.bindPopup(popup_1629b3ce18b42a43e8094ac1594fe47e)
+        ;
+
+        
+    
+    
+            var circle_marker_810414c182ee54f8463595e34893c118 = L.circleMarker(
+                [23.305558, 77.340941],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_da31ce6077a044edce5d278f03e920a3 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_204b39aec8adb9610cd858c1ec59a9df = $(`<div id="html_204b39aec8adb9610cd858c1ec59a9df" style="width: 100.0%; height: 100.0%;"><b>Clinic - Obaidullaganj 69</b><br>Type: Clinic<br>Beds: 3</div>`)[0];
+                popup_da31ce6077a044edce5d278f03e920a3.setContent(html_204b39aec8adb9610cd858c1ec59a9df);
+            
+        
+
+        circle_marker_810414c182ee54f8463595e34893c118.bindPopup(popup_da31ce6077a044edce5d278f03e920a3)
+        ;
+
+        
+    
+    
+            var circle_marker_da7611cff084b08fff3396f88cce6fc5 = L.circleMarker(
+                [23.160118, 77.549821],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_60031a8da6c8f94233857eefd14a3884 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_c22c43c585e3e0f2b94c1d4261feeebb = $(`<div id="html_c22c43c585e3e0f2b94c1d4261feeebb" style="width: 100.0%; height: 100.0%;"><b>Hospital - Shyamla Hills 1</b><br>Type: Hospital<br>Beds: 105</div>`)[0];
+                popup_60031a8da6c8f94233857eefd14a3884.setContent(html_c22c43c585e3e0f2b94c1d4261feeebb);
+            
+        
+
+        circle_marker_da7611cff084b08fff3396f88cce6fc5.bindPopup(popup_60031a8da6c8f94233857eefd14a3884)
+        ;
+
+        
+    
+    
+            var circle_marker_3759183330ec9dd01a02412255b57f41 = L.circleMarker(
+                [23.335273, 77.512174],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_88ac1e1e26b77d51fbdf49d7e13ef683 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_562a5215c7358c9d9b645f2a943d5907 = $(`<div id="html_562a5215c7358c9d9b645f2a943d5907" style="width: 100.0%; height: 100.0%;"><b>Clinic - Shyamla Hills 2</b><br>Type: Clinic<br>Beds: 2</div>`)[0];
+                popup_88ac1e1e26b77d51fbdf49d7e13ef683.setContent(html_562a5215c7358c9d9b645f2a943d5907);
+            
+        
+
+        circle_marker_3759183330ec9dd01a02412255b57f41.bindPopup(popup_88ac1e1e26b77d51fbdf49d7e13ef683)
+        ;
+
+        
+    
+    
+            var circle_marker_fd28afe03d0baf58663c0db2c6d9b044 = L.circleMarker(
+                [23.182927, 77.300539],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_c0282fdd1ed546774a131cacd4f4e6b6 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_b5b1512003a7afd6b7779a65df5afaa4 = $(`<div id="html_b5b1512003a7afd6b7779a65df5afaa4" style="width: 100.0%; height: 100.0%;"><b>Clinic - Arera Colony 3</b><br>Type: Clinic<br>Beds: 1</div>`)[0];
+                popup_c0282fdd1ed546774a131cacd4f4e6b6.setContent(html_b5b1512003a7afd6b7779a65df5afaa4);
+            
+        
+
+        circle_marker_fd28afe03d0baf58663c0db2c6d9b044.bindPopup(popup_c0282fdd1ed546774a131cacd4f4e6b6)
+        ;
+
+        
+    
+    
+            var circle_marker_1f5a7d878ee8123d2bca08a6d825a16f = L.circleMarker(
+                [23.20705, 77.474148],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_bb1ad14bf691971aa29cd9b45dc02a53 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_334cc15581876a1900029e8580ce7111 = $(`<div id="html_334cc15581876a1900029e8580ce7111" style="width: 100.0%; height: 100.0%;"><b>CHC - Arera Colony 4</b><br>Type: CHC<br>Beds: 88</div>`)[0];
+                popup_bb1ad14bf691971aa29cd9b45dc02a53.setContent(html_334cc15581876a1900029e8580ce7111);
+            
+        
+
+        circle_marker_1f5a7d878ee8123d2bca08a6d825a16f.bindPopup(popup_bb1ad14bf691971aa29cd9b45dc02a53)
+        ;
+
+        
+    
+    
+            var circle_marker_23814ff6464aeee3547f2faa5c118d48 = L.circleMarker(
+                [23.261154, 77.479602],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_7cbe57bc17ae37e1a602654d904d44c0 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_ec0dd68de67c237469b0ea4eb40aeee5 = $(`<div id="html_ec0dd68de67c237469b0ea4eb40aeee5" style="width: 100.0%; height: 100.0%;"><b>Hospital - MP Nagar 5</b><br>Type: Hospital<br>Beds: 280</div>`)[0];
+                popup_7cbe57bc17ae37e1a602654d904d44c0.setContent(html_ec0dd68de67c237469b0ea4eb40aeee5);
+            
+        
+
+        circle_marker_23814ff6464aeee3547f2faa5c118d48.bindPopup(popup_7cbe57bc17ae37e1a602654d904d44c0)
+        ;
+
+        
+    
+    
+            var circle_marker_bcceaffdf230aa7351796a804155e6c2 = L.circleMarker(
+                [23.162192, 77.378401],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_370396f0b9a51dc5188d7158d41d7041 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_248b90a27584fb62d28738ac615e3a4d = $(`<div id="html_248b90a27584fb62d28738ac615e3a4d" style="width: 100.0%; height: 100.0%;"><b>CHC - MP Nagar 6</b><br>Type: CHC<br>Beds: 99</div>`)[0];
+                popup_370396f0b9a51dc5188d7158d41d7041.setContent(html_248b90a27584fb62d28738ac615e3a4d);
+            
+        
+
+        circle_marker_bcceaffdf230aa7351796a804155e6c2.bindPopup(popup_370396f0b9a51dc5188d7158d41d7041)
+        ;
+
+        
+    
+    
+            var circle_marker_b343969545fa6dd7a267fdbbc69f3427 = L.circleMarker(
+                [23.181487, 77.540195],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_ac0a15848367dd95618c3fa54d063b19 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_8b450509924b720f251d5c0374871e1a = $(`<div id="html_8b450509924b720f251d5c0374871e1a" style="width: 100.0%; height: 100.0%;"><b>Clinic - New Market 7</b><br>Type: Clinic<br>Beds: 16</div>`)[0];
+                popup_ac0a15848367dd95618c3fa54d063b19.setContent(html_8b450509924b720f251d5c0374871e1a);
+            
+        
+
+        circle_marker_b343969545fa6dd7a267fdbbc69f3427.bindPopup(popup_ac0a15848367dd95618c3fa54d063b19)
+        ;
+
+        
+    
+    
+            var circle_marker_9b360cfb379074b5215465ea3fc3307d = L.circleMarker(
+                [23.230755, 77.535399],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_3ef346ddfb963dd7055110cb0a350330 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_a1b4c008f97b44e9af1000641250d737 = $(`<div id="html_a1b4c008f97b44e9af1000641250d737" style="width: 100.0%; height: 100.0%;"><b>Clinic - Habibganj 8</b><br>Type: Clinic<br>Beds: 7</div>`)[0];
+                popup_3ef346ddfb963dd7055110cb0a350330.setContent(html_a1b4c008f97b44e9af1000641250d737);
+            
+        
+
+        circle_marker_9b360cfb379074b5215465ea3fc3307d.bindPopup(popup_3ef346ddfb963dd7055110cb0a350330)
+        ;
+
+        
+    
+    
+            var circle_marker_db87181fbb0cf0b5e9e00392f2031d4c = L.circleMarker(
+                [23.197737, 77.398946],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_9a29e2f891d557e7d8610da79e54a9d0 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_b580373b95d5d3cedfec383272f0969f = $(`<div id="html_b580373b95d5d3cedfec383272f0969f" style="width: 100.0%; height: 100.0%;"><b>PHC - Govindpura 9</b><br>Type: PHC<br>Beds: 16</div>`)[0];
+                popup_9a29e2f891d557e7d8610da79e54a9d0.setContent(html_b580373b95d5d3cedfec383272f0969f);
+            
+        
+
+        circle_marker_db87181fbb0cf0b5e9e00392f2031d4c.bindPopup(popup_9a29e2f891d557e7d8610da79e54a9d0)
+        ;
+
+        
+    
+    
+            var circle_marker_d32693d85c020aeab653ae8624103d8e = L.circleMarker(
+                [23.151863, 77.45529],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_f6d67e8871bfa7cee88dbc5173205c82 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_d61fdd434c19c15c5ec679e3271ed9cc = $(`<div id="html_d61fdd434c19c15c5ec679e3271ed9cc" style="width: 100.0%; height: 100.0%;"><b>PHC - Berasia Road 10</b><br>Type: PHC<br>Beds: 8</div>`)[0];
+                popup_f6d67e8871bfa7cee88dbc5173205c82.setContent(html_d61fdd434c19c15c5ec679e3271ed9cc);
+            
+        
+
+        circle_marker_d32693d85c020aeab653ae8624103d8e.bindPopup(popup_f6d67e8871bfa7cee88dbc5173205c82)
+        ;
+
+        
+    
+    
+            var circle_marker_0847b5f3b5c18207a009b4763bbdf28f = L.circleMarker(
+                [23.20304, 77.533315],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_9f10b9f79e513d611873cdd3995d1075 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_008e75c817a49d8dc95270001319d5b3 = $(`<div id="html_008e75c817a49d8dc95270001319d5b3" style="width: 100.0%; height: 100.0%;"><b>Clinic - Karond 11</b><br>Type: Clinic<br>Beds: 16</div>`)[0];
+                popup_9f10b9f79e513d611873cdd3995d1075.setContent(html_008e75c817a49d8dc95270001319d5b3);
+            
+        
+
+        circle_marker_0847b5f3b5c18207a009b4763bbdf28f.bindPopup(popup_9f10b9f79e513d611873cdd3995d1075)
+        ;
+
+        
+    
+    
+            var circle_marker_33bf4c9231c2a9e98fb535dea292b891 = L.circleMarker(
+                [23.223905, 77.339437],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_cbe74db95e1aa7bc90b5b7c72b0d60d8 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_32d2d7d994219df5bab63f15d5d4a8f1 = $(`<div id="html_32d2d7d994219df5bab63f15d5d4a8f1" style="width: 100.0%; height: 100.0%;"><b>PHC - Karond 12</b><br>Type: PHC<br>Beds: 13</div>`)[0];
+                popup_cbe74db95e1aa7bc90b5b7c72b0d60d8.setContent(html_32d2d7d994219df5bab63f15d5d4a8f1);
+            
+        
+
+        circle_marker_33bf4c9231c2a9e98fb535dea292b891.bindPopup(popup_cbe74db95e1aa7bc90b5b7c72b0d60d8)
+        ;
+
+        
+    
+    
+            var circle_marker_145da479b9c3313091641772eaa2a6fc = L.circleMarker(
+                [23.272336, 77.546808],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_296afd20b367755267dc4af934983c6b = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_b2ef0e79f4e54a7350922ab631a13743 = $(`<div id="html_b2ef0e79f4e54a7350922ab631a13743" style="width: 100.0%; height: 100.0%;"><b>CHC - Karond 13</b><br>Type: CHC<br>Beds: 68</div>`)[0];
+                popup_296afd20b367755267dc4af934983c6b.setContent(html_b2ef0e79f4e54a7350922ab631a13743);
+            
+        
+
+        circle_marker_145da479b9c3313091641772eaa2a6fc.bindPopup(popup_296afd20b367755267dc4af934983c6b)
+        ;
+
+        
+    
+    
+            var circle_marker_ca7bc99281e12f58d8cc3259ca9968de = L.circleMarker(
+                [23.283573, 77.438651],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_222243c3cd1fc34837a7e4a355c9c19c = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_851633f79ca25a81ce452e8a662555fc = $(`<div id="html_851633f79ca25a81ce452e8a662555fc" style="width: 100.0%; height: 100.0%;"><b>Hospital - Nishatpura 14</b><br>Type: Hospital<br>Beds: 82</div>`)[0];
+                popup_222243c3cd1fc34837a7e4a355c9c19c.setContent(html_851633f79ca25a81ce452e8a662555fc);
+            
+        
+
+        circle_marker_ca7bc99281e12f58d8cc3259ca9968de.bindPopup(popup_222243c3cd1fc34837a7e4a355c9c19c)
+        ;
+
+        
+    
+    
+            var circle_marker_8bd5ec42e2aa0dd9e72648e47a8db4d6 = L.circleMarker(
+                [23.337786, 77.333573],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_f3d6f698db235d3661a2adce59b3b046 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_165e430ef9ff5124e0aa3be4ecbb00f5 = $(`<div id="html_165e430ef9ff5124e0aa3be4ecbb00f5" style="width: 100.0%; height: 100.0%;"><b>Clinic - Nishatpura 15</b><br>Type: Clinic<br>Beds: 3</div>`)[0];
+                popup_f3d6f698db235d3661a2adce59b3b046.setContent(html_165e430ef9ff5124e0aa3be4ecbb00f5);
+            
+        
+
+        circle_marker_8bd5ec42e2aa0dd9e72648e47a8db4d6.bindPopup(popup_f3d6f698db235d3661a2adce59b3b046)
+        ;
+
+        
+    
+    
+            var circle_marker_b6474001587a004e098d26c042ce7afb = L.circleMarker(
+                [23.218576, 77.471874],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_fdc0bb12f43c8dd9f1fa38288cacde10 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_c1af0789dcd5cf0180fd171e5bdb3718 = $(`<div id="html_c1af0789dcd5cf0180fd171e5bdb3718" style="width: 100.0%; height: 100.0%;"><b>PHC - Bhanpur 16</b><br>Type: PHC<br>Beds: 28</div>`)[0];
+                popup_fdc0bb12f43c8dd9f1fa38288cacde10.setContent(html_c1af0789dcd5cf0180fd171e5bdb3718);
+            
+        
+
+        circle_marker_b6474001587a004e098d26c042ce7afb.bindPopup(popup_fdc0bb12f43c8dd9f1fa38288cacde10)
+        ;
+
+        
+    
+    
+            var circle_marker_7e5550f3d17a09700b21fd4d1d253107 = L.circleMarker(
+                [23.247706, 77.526334],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_513d0a3e55e388cd072f007c045e3307 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_c23972360a0f54a0d08da96e6cb12dea = $(`<div id="html_c23972360a0f54a0d08da96e6cb12dea" style="width: 100.0%; height: 100.0%;"><b>CHC - Bhanpur 17</b><br>Type: CHC<br>Beds: 94</div>`)[0];
+                popup_513d0a3e55e388cd072f007c045e3307.setContent(html_c23972360a0f54a0d08da96e6cb12dea);
+            
+        
+
+        circle_marker_7e5550f3d17a09700b21fd4d1d253107.bindPopup(popup_513d0a3e55e388cd072f007c045e3307)
+        ;
+
+        
+    
+    
+            var circle_marker_e2519708e2bc62709fe69462b04337ed = L.circleMarker(
+                [23.276857, 77.507337],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_5e916cdfda6765f44123746c115761bd = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_decefc3faff2d3234712f8a5f239a563 = $(`<div id="html_decefc3faff2d3234712f8a5f239a563" style="width: 100.0%; height: 100.0%;"><b>Hospital - Katara Hills 18</b><br>Type: Hospital<br>Beds: 103</div>`)[0];
+                popup_5e916cdfda6765f44123746c115761bd.setContent(html_decefc3faff2d3234712f8a5f239a563);
+            
+        
+
+        circle_marker_e2519708e2bc62709fe69462b04337ed.bindPopup(popup_5e916cdfda6765f44123746c115761bd)
+        ;
+
+        
+    
+    
+            var circle_marker_0be030d6f8c2db7f0de3a9aa141c80b3 = L.circleMarker(
+                [23.298246, 77.43792],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_0ae3ddd592ee3528c2c98815fb9266ad = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_ede0f74a80cf2d09e72fc4de87b19516 = $(`<div id="html_ede0f74a80cf2d09e72fc4de87b19516" style="width: 100.0%; height: 100.0%;"><b>Hospital - Shahpura 19</b><br>Type: Hospital<br>Beds: 121</div>`)[0];
+                popup_0ae3ddd592ee3528c2c98815fb9266ad.setContent(html_ede0f74a80cf2d09e72fc4de87b19516);
+            
+        
+
+        circle_marker_0be030d6f8c2db7f0de3a9aa141c80b3.bindPopup(popup_0ae3ddd592ee3528c2c98815fb9266ad)
+        ;
+
+        
+    
+    
+            var circle_marker_28302a58533b324a6a928b8267532a4b = L.circleMarker(
+                [23.172375, 77.536263],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_7d3c8d2377d7c5ac292ea3dbcc629253 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_6990ed26b57e279cc167464059547383 = $(`<div id="html_6990ed26b57e279cc167464059547383" style="width: 100.0%; height: 100.0%;"><b>Clinic - Shahpura 20</b><br>Type: Clinic<br>Beds: 0</div>`)[0];
+                popup_7d3c8d2377d7c5ac292ea3dbcc629253.setContent(html_6990ed26b57e279cc167464059547383);
+            
+        
+
+        circle_marker_28302a58533b324a6a928b8267532a4b.bindPopup(popup_7d3c8d2377d7c5ac292ea3dbcc629253)
+        ;
+
+        
+    
+    
+            var circle_marker_1e351f455a754ce4466b85daf88b1812 = L.circleMarker(
+                [23.259118, 77.508649],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_48a8985b22b332b75f84a6ba37380796 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_55136e6784f746554ffabc916c7309ed = $(`<div id="html_55136e6784f746554ffabc916c7309ed" style="width: 100.0%; height: 100.0%;"><b>PHC - Shahpura 21</b><br>Type: PHC<br>Beds: 10</div>`)[0];
+                popup_48a8985b22b332b75f84a6ba37380796.setContent(html_55136e6784f746554ffabc916c7309ed);
+            
+        
+
+        circle_marker_1e351f455a754ce4466b85daf88b1812.bindPopup(popup_48a8985b22b332b75f84a6ba37380796)
+        ;
+
+        
+    
+    
+            var circle_marker_fd58a3e5d04cd755091075c3f89c4dcb = L.circleMarker(
+                [23.329785, 77.352519],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_0036de50b7317250f6c058ff22df6029 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_fd6e86bf951a8a3dd516b90b8ba6ea03 = $(`<div id="html_fd6e86bf951a8a3dd516b90b8ba6ea03" style="width: 100.0%; height: 100.0%;"><b>CHC - Huzur 22</b><br>Type: CHC<br>Beds: 35</div>`)[0];
+                popup_0036de50b7317250f6c058ff22df6029.setContent(html_fd6e86bf951a8a3dd516b90b8ba6ea03);
+            
+        
+
+        circle_marker_fd58a3e5d04cd755091075c3f89c4dcb.bindPopup(popup_0036de50b7317250f6c058ff22df6029)
+        ;
+
+        
+    
+    
+            var circle_marker_a18835e7944f0f0d659cd2003017dbeb = L.circleMarker(
+                [23.344767, 77.487369],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_1d1df7c11d5e0279849c6a20768e5f44 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_9c3203b1348b31c982b7ed1f007ce0fb = $(`<div id="html_9c3203b1348b31c982b7ed1f007ce0fb" style="width: 100.0%; height: 100.0%;"><b>PHC - Bhopal Tal 23</b><br>Type: PHC<br>Beds: 19</div>`)[0];
+                popup_1d1df7c11d5e0279849c6a20768e5f44.setContent(html_9c3203b1348b31c982b7ed1f007ce0fb);
+            
+        
+
+        circle_marker_a18835e7944f0f0d659cd2003017dbeb.bindPopup(popup_1d1df7c11d5e0279849c6a20768e5f44)
+        ;
+
+        
+    
+    
+            var circle_marker_3d3484aee828a117ff50db6c6fac92cc = L.circleMarker(
+                [23.322921, 77.544052],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_c07dbccd10f340c9bbfe84e2d003e684 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_bdb9fb715709cadb9577eba42ec20963 = $(`<div id="html_bdb9fb715709cadb9577eba42ec20963" style="width: 100.0%; height: 100.0%;"><b>CHC - Bhopal Tal 24</b><br>Type: CHC<br>Beds: 60</div>`)[0];
+                popup_c07dbccd10f340c9bbfe84e2d003e684.setContent(html_bdb9fb715709cadb9577eba42ec20963);
+            
+        
+
+        circle_marker_3d3484aee828a117ff50db6c6fac92cc.bindPopup(popup_c07dbccd10f340c9bbfe84e2d003e684)
+        ;
+
+        
+    
+    
+            var circle_marker_0d607e9efcbbf2ec97ddd7bc3717dc53 = L.circleMarker(
+                [23.154957, 77.484141],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_b8fb7b965700601dc70294b26592d6b1 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_136b38fc4821c9e99aa4d72527560362 = $(`<div id="html_136b38fc4821c9e99aa4d72527560362" style="width: 100.0%; height: 100.0%;"><b>Hospital - Mangalwara 25</b><br>Type: Hospital<br>Beds: 185</div>`)[0];
+                popup_b8fb7b965700601dc70294b26592d6b1.setContent(html_136b38fc4821c9e99aa4d72527560362);
+            
+        
+
+        circle_marker_0d607e9efcbbf2ec97ddd7bc3717dc53.bindPopup(popup_b8fb7b965700601dc70294b26592d6b1)
+        ;
+
+        
+    
+    
+            var circle_marker_948ba5ab7255a3613b10521f84a7867f = L.circleMarker(
+                [23.322813, 77.502687],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_02e09968966e56a2245dbdbe17cde531 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_96ada4e07e37192dcab0303408832a1f = $(`<div id="html_96ada4e07e37192dcab0303408832a1f" style="width: 100.0%; height: 100.0%;"><b>PHC - Mangalwara 26</b><br>Type: PHC<br>Beds: 27</div>`)[0];
+                popup_02e09968966e56a2245dbdbe17cde531.setContent(html_96ada4e07e37192dcab0303408832a1f);
+            
+        
+
+        circle_marker_948ba5ab7255a3613b10521f84a7867f.bindPopup(popup_02e09968966e56a2245dbdbe17cde531)
+        ;
+
+        
+    
+    
+            var circle_marker_ff02c3b9c92b53f9e4cefe762879487e = L.circleMarker(
+                [23.226508, 77.309681],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_dd8950c64b9fbd059722995225f0d1d8 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_87d3ff2af5b29ee3fcea4d5b14ad3234 = $(`<div id="html_87d3ff2af5b29ee3fcea4d5b14ad3234" style="width: 100.0%; height: 100.0%;"><b>Hospital - Shiv Nagar 27</b><br>Type: Hospital<br>Beds: 107</div>`)[0];
+                popup_dd8950c64b9fbd059722995225f0d1d8.setContent(html_87d3ff2af5b29ee3fcea4d5b14ad3234);
+            
+        
+
+        circle_marker_ff02c3b9c92b53f9e4cefe762879487e.bindPopup(popup_dd8950c64b9fbd059722995225f0d1d8)
+        ;
+
+        
+    
+    
+            var circle_marker_eb0d8b0eee706d8924ead2484ae98d2f = L.circleMarker(
+                [23.313317, 77.415076],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_780e2d3aa3608cded8cf82412175abb3 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_eb19c1d4e8f75a0228a044a4394c8495 = $(`<div id="html_eb19c1d4e8f75a0228a044a4394c8495" style="width: 100.0%; height: 100.0%;"><b>Clinic - Shiv Nagar 28</b><br>Type: Clinic<br>Beds: 6</div>`)[0];
+                popup_780e2d3aa3608cded8cf82412175abb3.setContent(html_eb19c1d4e8f75a0228a044a4394c8495);
+            
+        
+
+        circle_marker_eb0d8b0eee706d8924ead2484ae98d2f.bindPopup(popup_780e2d3aa3608cded8cf82412175abb3)
+        ;
+
+        
+    
+    
+            var circle_marker_a1f0eda699437a0636248026c40cc594 = L.circleMarker(
+                [23.194585, 77.465008],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_e10f86a4836f5911ffe2ceceeda6dafe = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_d303bd86db7f995723c294c5c3897f43 = $(`<div id="html_d303bd86db7f995723c294c5c3897f43" style="width: 100.0%; height: 100.0%;"><b>CHC - Shiv Nagar 29</b><br>Type: CHC<br>Beds: 59</div>`)[0];
+                popup_e10f86a4836f5911ffe2ceceeda6dafe.setContent(html_d303bd86db7f995723c294c5c3897f43);
+            
+        
+
+        circle_marker_a1f0eda699437a0636248026c40cc594.bindPopup(popup_e10f86a4836f5911ffe2ceceeda6dafe)
+        ;
+
+        
+    
+    
+            var circle_marker_7604bb23c4535b2b9881e6bb31a73218 = L.circleMarker(
+                [23.278296, 77.39992],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_796f19d17df9381ebcb502482d89966b = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_3f2ab0ae67500f0a365b0301d9c1552e = $(`<div id="html_3f2ab0ae67500f0a365b0301d9c1552e" style="width: 100.0%; height: 100.0%;"><b>CHC - Peer Gate 30</b><br>Type: CHC<br>Beds: 74</div>`)[0];
+                popup_796f19d17df9381ebcb502482d89966b.setContent(html_3f2ab0ae67500f0a365b0301d9c1552e);
+            
+        
+
+        circle_marker_7604bb23c4535b2b9881e6bb31a73218.bindPopup(popup_796f19d17df9381ebcb502482d89966b)
+        ;
+
+        
+    
+    
+            var circle_marker_173a15df6a450b9e07d16bd43c119db9 = L.circleMarker(
+                [23.21623, 77.3069],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_5f85b11d78c40fb04c94ca2e2e16acdf = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_76b4987b2b19188417e139f05ec49d07 = $(`<div id="html_76b4987b2b19188417e139f05ec49d07" style="width: 100.0%; height: 100.0%;"><b>Hospital - Ibtedai 31</b><br>Type: Hospital<br>Beds: 217</div>`)[0];
+                popup_5f85b11d78c40fb04c94ca2e2e16acdf.setContent(html_76b4987b2b19188417e139f05ec49d07);
+            
+        
+
+        circle_marker_173a15df6a450b9e07d16bd43c119db9.bindPopup(popup_5f85b11d78c40fb04c94ca2e2e16acdf)
+        ;
+
+        
+    
+    
+            var circle_marker_540e3ce04baae06c751076854a36bb6f = L.circleMarker(
+                [23.185714, 77.540634],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_f0e7063aee4dcdc6cb95b22b4b48158c = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_1bafb1186b139c617e9b38648118f50a = $(`<div id="html_1bafb1186b139c617e9b38648118f50a" style="width: 100.0%; height: 100.0%;"><b>Clinic - Ibtedai 32</b><br>Type: Clinic<br>Beds: 8</div>`)[0];
+                popup_f0e7063aee4dcdc6cb95b22b4b48158c.setContent(html_1bafb1186b139c617e9b38648118f50a);
+            
+        
+
+        circle_marker_540e3ce04baae06c751076854a36bb6f.bindPopup(popup_f0e7063aee4dcdc6cb95b22b4b48158c)
+        ;
+
+        
+    
+    
+            var circle_marker_c03b99d6dabe4439b69f55abdb81e138 = L.circleMarker(
+                [23.237279, 77.546059],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_7503ffc3b87fc77b77db7890d553012c = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_47972c336b81b9beff7f8717759288da = $(`<div id="html_47972c336b81b9beff7f8717759288da" style="width: 100.0%; height: 100.0%;"><b>Clinic - Jumerati 33</b><br>Type: Clinic<br>Beds: 10</div>`)[0];
+                popup_7503ffc3b87fc77b77db7890d553012c.setContent(html_47972c336b81b9beff7f8717759288da);
+            
+        
+
+        circle_marker_c03b99d6dabe4439b69f55abdb81e138.bindPopup(popup_7503ffc3b87fc77b77db7890d553012c)
+        ;
+
+        
+    
+    
+            var circle_marker_6b7a8e5308949b4fcbb69a7329726b42 = L.circleMarker(
+                [23.200945, 77.477196],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_da3358e4da9d5dab547ee47fc4c5a6e4 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_eab6a0874949ab9bd5e0964be0f3268b = $(`<div id="html_eab6a0874949ab9bd5e0964be0f3268b" style="width: 100.0%; height: 100.0%;"><b>CHC - Jumerati 34</b><br>Type: CHC<br>Beds: 54</div>`)[0];
+                popup_da3358e4da9d5dab547ee47fc4c5a6e4.setContent(html_eab6a0874949ab9bd5e0964be0f3268b);
+            
+        
+
+        circle_marker_6b7a8e5308949b4fcbb69a7329726b42.bindPopup(popup_da3358e4da9d5dab547ee47fc4c5a6e4)
+        ;
+
+        
+    
+    
+            var circle_marker_ba3a4114bbba75efe42eeb47fd71b301 = L.circleMarker(
+                [23.287371, 77.535066],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_b25def1b2259fc3a5901a1fd3b49c8e2 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_612ba57f99a743ef5afd1d2509e8385f = $(`<div id="html_612ba57f99a743ef5afd1d2509e8385f" style="width: 100.0%; height: 100.0%;"><b>Clinic - Budhwara 35</b><br>Type: Clinic<br>Beds: 17</div>`)[0];
+                popup_b25def1b2259fc3a5901a1fd3b49c8e2.setContent(html_612ba57f99a743ef5afd1d2509e8385f);
+            
+        
+
+        circle_marker_ba3a4114bbba75efe42eeb47fd71b301.bindPopup(popup_b25def1b2259fc3a5901a1fd3b49c8e2)
+        ;
+
+        
+    
+    
+            var circle_marker_6069293e21b49f57f1239d70ac605b2d = L.circleMarker(
+                [23.222844, 77.317493],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_5dbe0d034f4f87b41267d43ec83d853d = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_8cc962c3c9d70a45753c8710b2a43a21 = $(`<div id="html_8cc962c3c9d70a45753c8710b2a43a21" style="width: 100.0%; height: 100.0%;"><b>PHC - Budhwara 36</b><br>Type: PHC<br>Beds: 12</div>`)[0];
+                popup_5dbe0d034f4f87b41267d43ec83d853d.setContent(html_8cc962c3c9d70a45753c8710b2a43a21);
+            
+        
+
+        circle_marker_6069293e21b49f57f1239d70ac605b2d.bindPopup(popup_5dbe0d034f4f87b41267d43ec83d853d)
+        ;
+
+        
+    
+    
+            var circle_marker_6c01da408bde79e08cb28221724325cd = L.circleMarker(
+                [23.330009, 77.426781],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_d304aa83e5fb52e5012cb136cb167a6c = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_007ce9432c03d3506b7672f6d7b4cc23 = $(`<div id="html_007ce9432c03d3506b7672f6d7b4cc23" style="width: 100.0%; height: 100.0%;"><b>PHC - Char Imli 37</b><br>Type: PHC<br>Beds: 29</div>`)[0];
+                popup_d304aa83e5fb52e5012cb136cb167a6c.setContent(html_007ce9432c03d3506b7672f6d7b4cc23);
+            
+        
+
+        circle_marker_6c01da408bde79e08cb28221724325cd.bindPopup(popup_d304aa83e5fb52e5012cb136cb167a6c)
+        ;
+
+        
+    
+    
+            var circle_marker_56d66769eb3a1972e8bd7d219990052c = L.circleMarker(
+                [23.175458, 77.405112],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_a1055dacdc1e22beb66ee57dc0fe1b9b = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_731f2c5dd07ce16cbea948003a21e942 = $(`<div id="html_731f2c5dd07ce16cbea948003a21e942" style="width: 100.0%; height: 100.0%;"><b>Clinic - Kasturba Nagar 38</b><br>Type: Clinic<br>Beds: 17</div>`)[0];
+                popup_a1055dacdc1e22beb66ee57dc0fe1b9b.setContent(html_731f2c5dd07ce16cbea948003a21e942);
+            
+        
+
+        circle_marker_56d66769eb3a1972e8bd7d219990052c.bindPopup(popup_a1055dacdc1e22beb66ee57dc0fe1b9b)
+        ;
+
+        
+    
+    
+            var circle_marker_bfa88c8cf54be2c045d9d745bc21ad83 = L.circleMarker(
+                [23.299627, 77.343507],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_671409752f8c5ccfc68c784695f81346 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_c77e1b770d6a1d34752b2d2304d279d7 = $(`<div id="html_c77e1b770d6a1d34752b2d2304d279d7" style="width: 100.0%; height: 100.0%;"><b>PHC - Kasturba Nagar 39</b><br>Type: PHC<br>Beds: 27</div>`)[0];
+                popup_671409752f8c5ccfc68c784695f81346.setContent(html_c77e1b770d6a1d34752b2d2304d279d7);
+            
+        
+
+        circle_marker_bfa88c8cf54be2c045d9d745bc21ad83.bindPopup(popup_671409752f8c5ccfc68c784695f81346)
+        ;
+
+        
+    
+    
+            var circle_marker_7ba23ae47ada1a74ea165d46eb6d0b4d = L.circleMarker(
+                [23.207383, 77.407472],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_d8ffef7ecde2fcfd590f39e50780b8f8 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_449ce186e7cb4f158cd031241dca3da3 = $(`<div id="html_449ce186e7cb4f158cd031241dca3da3" style="width: 100.0%; height: 100.0%;"><b>Clinic - Bairagarh 40</b><br>Type: Clinic<br>Beds: 9</div>`)[0];
+                popup_d8ffef7ecde2fcfd590f39e50780b8f8.setContent(html_449ce186e7cb4f158cd031241dca3da3);
+            
+        
+
+        circle_marker_7ba23ae47ada1a74ea165d46eb6d0b4d.bindPopup(popup_d8ffef7ecde2fcfd590f39e50780b8f8)
+        ;
+
+        
+    
+    
+            var circle_marker_63bb08adde0f552ae9a2b1583c4acd25 = L.circleMarker(
+                [23.21445, 77.410447],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_9914217dad4aa7b07d6488bb154693b6 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_efc45ac0cf00ef451ae45c66c200e173 = $(`<div id="html_efc45ac0cf00ef451ae45c66c200e173" style="width: 100.0%; height: 100.0%;"><b>PHC - Bairagarh 41</b><br>Type: PHC<br>Beds: 26</div>`)[0];
+                popup_9914217dad4aa7b07d6488bb154693b6.setContent(html_efc45ac0cf00ef451ae45c66c200e173);
+            
+        
+
+        circle_marker_63bb08adde0f552ae9a2b1583c4acd25.bindPopup(popup_9914217dad4aa7b07d6488bb154693b6)
+        ;
+
+        
+    
+    
+            var circle_marker_a27aaed987b47f1b9723620c3549541c = L.circleMarker(
+                [23.28177, 77.370947],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_875b83bd7c93931cdee162535edb1cb8 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_389c1a731ffe44dc608a6dc08b7bb8a9 = $(`<div id="html_389c1a731ffe44dc608a6dc08b7bb8a9" style="width: 100.0%; height: 100.0%;"><b>Clinic - Indrapuri 42</b><br>Type: Clinic<br>Beds: 5</div>`)[0];
+                popup_875b83bd7c93931cdee162535edb1cb8.setContent(html_389c1a731ffe44dc608a6dc08b7bb8a9);
+            
+        
+
+        circle_marker_a27aaed987b47f1b9723620c3549541c.bindPopup(popup_875b83bd7c93931cdee162535edb1cb8)
+        ;
+
+        
+    
+    
+            var circle_marker_17910e78317d1d7f405457c773ec9167 = L.circleMarker(
+                [23.284559, 77.35616],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_abf4d423966380b95513145999d4753d = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_7b95a22845f039a5b2f1ff60d5e50c98 = $(`<div id="html_7b95a22845f039a5b2f1ff60d5e50c98" style="width: 100.0%; height: 100.0%;"><b>Clinic - Nehru Nagar 43</b><br>Type: Clinic<br>Beds: 7</div>`)[0];
+                popup_abf4d423966380b95513145999d4753d.setContent(html_7b95a22845f039a5b2f1ff60d5e50c98);
+            
+        
+
+        circle_marker_17910e78317d1d7f405457c773ec9167.bindPopup(popup_abf4d423966380b95513145999d4753d)
+        ;
+
+        
+    
+    
+            var circle_marker_7befbd31a94077c80ae80652ee99735b = L.circleMarker(
+                [23.241083, 77.521534],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_856d9c11cdf33cda64896f48f79b3ea2 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_4a9795d87ee049993b32fa0bf05c0be8 = $(`<div id="html_4a9795d87ee049993b32fa0bf05c0be8" style="width: 100.0%; height: 100.0%;"><b>Clinic - Ashoka Garden 44</b><br>Type: Clinic<br>Beds: 2</div>`)[0];
+                popup_856d9c11cdf33cda64896f48f79b3ea2.setContent(html_4a9795d87ee049993b32fa0bf05c0be8);
+            
+        
+
+        circle_marker_7befbd31a94077c80ae80652ee99735b.bindPopup(popup_856d9c11cdf33cda64896f48f79b3ea2)
+        ;
+
+        
+    
+    
+            var circle_marker_78ce914bd8a31896dc64dc48bf86a6e4 = L.circleMarker(
+                [23.248875, 77.360996],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_11218c5baf2d7afd44862c2ae0243a47 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_240b00d08e7043cd45f1e1e9b24321f3 = $(`<div id="html_240b00d08e7043cd45f1e1e9b24321f3" style="width: 100.0%; height: 100.0%;"><b>CHC - Ashoka Garden 45</b><br>Type: CHC<br>Beds: 79</div>`)[0];
+                popup_11218c5baf2d7afd44862c2ae0243a47.setContent(html_240b00d08e7043cd45f1e1e9b24321f3);
+            
+        
+
+        circle_marker_78ce914bd8a31896dc64dc48bf86a6e4.bindPopup(popup_11218c5baf2d7afd44862c2ae0243a47)
+        ;
+
+        
+    
+    
+            var circle_marker_347d1cd9efe7ffaf1b0677b2a4bf876d = L.circleMarker(
+                [23.328532, 77.51511],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_a1327da8aaf697cb34f93e9f8eaed872 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_b5c5b8a2b7efdb9ddf471d01de61c158 = $(`<div id="html_b5c5b8a2b7efdb9ddf471d01de61c158" style="width: 100.0%; height: 100.0%;"><b>Hospital - Gulmohar 46</b><br>Type: Hospital<br>Beds: 81</div>`)[0];
+                popup_a1327da8aaf697cb34f93e9f8eaed872.setContent(html_b5c5b8a2b7efdb9ddf471d01de61c158);
+            
+        
+
+        circle_marker_347d1cd9efe7ffaf1b0677b2a4bf876d.bindPopup(popup_a1327da8aaf697cb34f93e9f8eaed872)
+        ;
+
+        
+    
+    
+            var circle_marker_6e0b66fea084ca1433b6a6b602c03372 = L.circleMarker(
+                [23.193768, 77.501027],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_6e37d216700a1666a147350fd39b4f7a = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_4d1399057407f795b21c9754a25df261 = $(`<div id="html_4d1399057407f795b21c9754a25df261" style="width: 100.0%; height: 100.0%;"><b>Clinic - Gulmohar 47</b><br>Type: Clinic<br>Beds: 13</div>`)[0];
+                popup_6e37d216700a1666a147350fd39b4f7a.setContent(html_4d1399057407f795b21c9754a25df261);
+            
+        
+
+        circle_marker_6e0b66fea084ca1433b6a6b602c03372.bindPopup(popup_6e37d216700a1666a147350fd39b4f7a)
+        ;
+
+        
+    
+    
+            var circle_marker_ce6b562953e97f0a155df191e6a2e6a5 = L.circleMarker(
+                [23.160044, 77.3623],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_595b637001f8b8b8230b005ebd203f74 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_f04b752b3ca3140424530c13dc6237af = $(`<div id="html_f04b752b3ca3140424530c13dc6237af" style="width: 100.0%; height: 100.0%;"><b>PHC - Gulmohar 48</b><br>Type: PHC<br>Beds: 20</div>`)[0];
+                popup_595b637001f8b8b8230b005ebd203f74.setContent(html_f04b752b3ca3140424530c13dc6237af);
+            
+        
+
+        circle_marker_ce6b562953e97f0a155df191e6a2e6a5.bindPopup(popup_595b637001f8b8b8230b005ebd203f74)
+        ;
+
+        
+    
+    
+            var circle_marker_11ffda1a415f41b2babf34ab9f97ded0 = L.circleMarker(
+                [23.176668, 77.416161],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_245173acbd3db8d886d3a62bb35fc5da = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_5f0a0b912545574dd16dfef30ee6d67c = $(`<div id="html_5f0a0b912545574dd16dfef30ee6d67c" style="width: 100.0%; height: 100.0%;"><b>CHC - Gulmohar 49</b><br>Type: CHC<br>Beds: 88</div>`)[0];
+                popup_245173acbd3db8d886d3a62bb35fc5da.setContent(html_5f0a0b912545574dd16dfef30ee6d67c);
+            
+        
+
+        circle_marker_11ffda1a415f41b2babf34ab9f97ded0.bindPopup(popup_245173acbd3db8d886d3a62bb35fc5da)
+        ;
+
+        
+    
+    
+            var circle_marker_c709aeb89f9cdfe25f4742589976bc48 = L.circleMarker(
+                [23.340008, 77.522856],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_fa3543761c72832e6c6ead35c9f705a3 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_693007d9d8029dc607d886a3d5108b66 = $(`<div id="html_693007d9d8029dc607d886a3d5108b66" style="width: 100.0%; height: 100.0%;"><b>Clinic - Saket Nagar 50</b><br>Type: Clinic<br>Beds: 10</div>`)[0];
+                popup_fa3543761c72832e6c6ead35c9f705a3.setContent(html_693007d9d8029dc607d886a3d5108b66);
+            
+        
+
+        circle_marker_c709aeb89f9cdfe25f4742589976bc48.bindPopup(popup_fa3543761c72832e6c6ead35c9f705a3)
+        ;
+
+        
+    
+    
+            var circle_marker_12bca724eca3d97e8e9b1e6fc512b70f = L.circleMarker(
+                [23.235348, 77.526714],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_0072aa9c4213eb00acbc825c00214e07 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_c5bcbf14f38e27a3077f3500622e8a7d = $(`<div id="html_c5bcbf14f38e27a3077f3500622e8a7d" style="width: 100.0%; height: 100.0%;"><b>CHC - Saket Nagar 51</b><br>Type: CHC<br>Beds: 94</div>`)[0];
+                popup_0072aa9c4213eb00acbc825c00214e07.setContent(html_c5bcbf14f38e27a3077f3500622e8a7d);
+            
+        
+
+        circle_marker_12bca724eca3d97e8e9b1e6fc512b70f.bindPopup(popup_0072aa9c4213eb00acbc825c00214e07)
+        ;
+
+        
+    
+    
+            var circle_marker_372b935ae40bcd475c6cf4e835814696 = L.circleMarker(
+                [23.201838, 77.36181],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_8cda334897f4c5dc5dde44f4b0aa50cd = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_94cc121db293b4620b48ef0ab7a951b6 = $(`<div id="html_94cc121db293b4620b48ef0ab7a951b6" style="width: 100.0%; height: 100.0%;"><b>PHC - Piplani 52</b><br>Type: PHC<br>Beds: 20</div>`)[0];
+                popup_8cda334897f4c5dc5dde44f4b0aa50cd.setContent(html_94cc121db293b4620b48ef0ab7a951b6);
+            
+        
+
+        circle_marker_372b935ae40bcd475c6cf4e835814696.bindPopup(popup_8cda334897f4c5dc5dde44f4b0aa50cd)
+        ;
+
+        
+    
+    
+            var circle_marker_d7bf23d33afc6c6583155e334fda2075 = L.circleMarker(
+                [23.246919, 77.359811],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_a0bb21cda6387de4f88f06f18f5e7172 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_fd0a5302cfbc2558c8c3694b35a9493c = $(`<div id="html_fd0a5302cfbc2558c8c3694b35a9493c" style="width: 100.0%; height: 100.0%;"><b>Hospital - Ayodhya Bypass 53</b><br>Type: Hospital<br>Beds: 213</div>`)[0];
+                popup_a0bb21cda6387de4f88f06f18f5e7172.setContent(html_fd0a5302cfbc2558c8c3694b35a9493c);
+            
+        
+
+        circle_marker_d7bf23d33afc6c6583155e334fda2075.bindPopup(popup_a0bb21cda6387de4f88f06f18f5e7172)
+        ;
+
+        
+    
+    
+            var circle_marker_7303f708178dc15152c839b249d8963f = L.circleMarker(
+                [23.196899, 77.383962],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_010b234ebe9a76d16092eb66435cd941 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_fa4ef822893de1c04659593e41f1fcda = $(`<div id="html_fa4ef822893de1c04659593e41f1fcda" style="width: 100.0%; height: 100.0%;"><b>Clinic - Ayodhya Bypass 54</b><br>Type: Clinic<br>Beds: 9</div>`)[0];
+                popup_010b234ebe9a76d16092eb66435cd941.setContent(html_fa4ef822893de1c04659593e41f1fcda);
+            
+        
+
+        circle_marker_7303f708178dc15152c839b249d8963f.bindPopup(popup_010b234ebe9a76d16092eb66435cd941)
+        ;
+
+        
+    
+    
+            var circle_marker_ca6a1897c1e83b53ec0663a2d5b87aa4 = L.circleMarker(
+                [23.177675, 77.357815],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_eebf2f364af6f3c9e6b1da1fbf928c65 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_f5b091d064c563538042832951d48372 = $(`<div id="html_f5b091d064c563538042832951d48372" style="width: 100.0%; height: 100.0%;"><b>PHC - Ayodhya Bypass 55</b><br>Type: PHC<br>Beds: 8</div>`)[0];
+                popup_eebf2f364af6f3c9e6b1da1fbf928c65.setContent(html_f5b091d064c563538042832951d48372);
+            
+        
+
+        circle_marker_ca6a1897c1e83b53ec0663a2d5b87aa4.bindPopup(popup_eebf2f364af6f3c9e6b1da1fbf928c65)
+        ;
+
+        
+    
+    
+            var circle_marker_e44e130e42757b0675001f245b11d5f6 = L.circleMarker(
+                [23.232974, 77.38272],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_6b9085ef0ee0c6ad80501178fb26c9fe = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_4bd17cdf1ff6a600244ee9c2fa7ed4cf = $(`<div id="html_4bd17cdf1ff6a600244ee9c2fa7ed4cf" style="width: 100.0%; height: 100.0%;"><b>Hospital - Chunabhatti 56</b><br>Type: Hospital<br>Beds: 96</div>`)[0];
+                popup_6b9085ef0ee0c6ad80501178fb26c9fe.setContent(html_4bd17cdf1ff6a600244ee9c2fa7ed4cf);
+            
+        
+
+        circle_marker_e44e130e42757b0675001f245b11d5f6.bindPopup(popup_6b9085ef0ee0c6ad80501178fb26c9fe)
+        ;
+
+        
+    
+    
+            var circle_marker_08cf0a970a280efa745f089546588cc5 = L.circleMarker(
+                [23.191367, 77.405036],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_21f6300ac68032c577ccefc5341c690c = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_23c8ee91f0edc08a90463bce6da5cd1a = $(`<div id="html_23c8ee91f0edc08a90463bce6da5cd1a" style="width: 100.0%; height: 100.0%;"><b>Clinic - Chunabhatti 57</b><br>Type: Clinic<br>Beds: 1</div>`)[0];
+                popup_21f6300ac68032c577ccefc5341c690c.setContent(html_23c8ee91f0edc08a90463bce6da5cd1a);
+            
+        
+
+        circle_marker_08cf0a970a280efa745f089546588cc5.bindPopup(popup_21f6300ac68032c577ccefc5341c690c)
+        ;
+
+        
+    
+    
+            var circle_marker_603a94fc3e4376cac512826f266916fd = L.circleMarker(
+                [23.339212, 77.304883],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_42a5470e703fc9300c3cf604fde60121 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_a528b5ec4465ea0f84505e415a335361 = $(`<div id="html_a528b5ec4465ea0f84505e415a335361" style="width: 100.0%; height: 100.0%;"><b>PHC - Chunabhatti 58</b><br>Type: PHC<br>Beds: 24</div>`)[0];
+                popup_42a5470e703fc9300c3cf604fde60121.setContent(html_a528b5ec4465ea0f84505e415a335361);
+            
+        
+
+        circle_marker_603a94fc3e4376cac512826f266916fd.bindPopup(popup_42a5470e703fc9300c3cf604fde60121)
+        ;
+
+        
+    
+    
+            var circle_marker_e19471185cb3c2a1f127767695d31c53 = L.circleMarker(
+                [23.245396, 77.535685],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_37a4d02118a68afefe57d21a15a539a0 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_c6db854c7d9dba8e81fda5ed7d3f42ff = $(`<div id="html_c6db854c7d9dba8e81fda5ed7d3f42ff" style="width: 100.0%; height: 100.0%;"><b>CHC - Chunabhatti 59</b><br>Type: CHC<br>Beds: 78</div>`)[0];
+                popup_37a4d02118a68afefe57d21a15a539a0.setContent(html_c6db854c7d9dba8e81fda5ed7d3f42ff);
+            
+        
+
+        circle_marker_e19471185cb3c2a1f127767695d31c53.bindPopup(popup_37a4d02118a68afefe57d21a15a539a0)
+        ;
+
+        
+    
+    
+            var circle_marker_03fe37edabbeaa28c54bdf9083552be7 = L.circleMarker(
+                [23.257644, 77.483659],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_9d3a5222e63e7e1668b4aec9b8f319b1 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_135d39f0f18e01c7a97e7ea7c96afd10 = $(`<div id="html_135d39f0f18e01c7a97e7ea7c96afd10" style="width: 100.0%; height: 100.0%;"><b>PHC - Misrod 60</b><br>Type: PHC<br>Beds: 19</div>`)[0];
+                popup_9d3a5222e63e7e1668b4aec9b8f319b1.setContent(html_135d39f0f18e01c7a97e7ea7c96afd10);
+            
+        
+
+        circle_marker_03fe37edabbeaa28c54bdf9083552be7.bindPopup(popup_9d3a5222e63e7e1668b4aec9b8f319b1)
+        ;
+
+        
+    
+    
+            var circle_marker_8341c11f53d203684afddd0fbbea67ce = L.circleMarker(
+                [23.247646, 77.368234],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_8feaf4ab594bc283a3d940fb48ad4b6c = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_f9f85114bc3baf00bbd27e6e8458470f = $(`<div id="html_f9f85114bc3baf00bbd27e6e8458470f" style="width: 100.0%; height: 100.0%;"><b>CHC - Misrod 61</b><br>Type: CHC<br>Beds: 58</div>`)[0];
+                popup_8feaf4ab594bc283a3d940fb48ad4b6c.setContent(html_f9f85114bc3baf00bbd27e6e8458470f);
+            
+        
+
+        circle_marker_8341c11f53d203684afddd0fbbea67ce.bindPopup(popup_8feaf4ab594bc283a3d940fb48ad4b6c)
+        ;
+
+        
+    
+    
+            var circle_marker_1451e8414ae59bf65cc64312e9727d8f = L.circleMarker(
+                [23.294836, 77.510126],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_b5935f9d59e80304c6b9b5d33c5d345b = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_65dad30948951668ae169525d190fde7 = $(`<div id="html_65dad30948951668ae169525d190fde7" style="width: 100.0%; height: 100.0%;"><b>PHC - Ratibad 62</b><br>Type: PHC<br>Beds: 18</div>`)[0];
+                popup_b5935f9d59e80304c6b9b5d33c5d345b.setContent(html_65dad30948951668ae169525d190fde7);
+            
+        
+
+        circle_marker_1451e8414ae59bf65cc64312e9727d8f.bindPopup(popup_b5935f9d59e80304c6b9b5d33c5d345b)
+        ;
+
+        
+    
+    
+            var circle_marker_09e2359b3b2fa91ed81921d43ecf2b83 = L.circleMarker(
+                [23.155393, 77.398505],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_492228c979ab35d33f402930010d3428 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_5a16be929b81364ca13bf41930226a34 = $(`<div id="html_5a16be929b81364ca13bf41930226a34" style="width: 100.0%; height: 100.0%;"><b>CHC - Ratibad 63</b><br>Type: CHC<br>Beds: 98</div>`)[0];
+                popup_492228c979ab35d33f402930010d3428.setContent(html_5a16be929b81364ca13bf41930226a34);
+            
+        
+
+        circle_marker_09e2359b3b2fa91ed81921d43ecf2b83.bindPopup(popup_492228c979ab35d33f402930010d3428)
+        ;
+
+        
+    
+    
+            var circle_marker_44b3999ba6e90baae4ef8fe8ae087a0e = L.circleMarker(
+                [23.205651, 77.537801],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_07da2c3d48a42ee07b0396dcc882d62e = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_e5823fecb43ffd0e6167ea17e1daa6fc = $(`<div id="html_e5823fecb43ffd0e6167ea17e1daa6fc" style="width: 100.0%; height: 100.0%;"><b>Clinic - Khajuri Kalan 64</b><br>Type: Clinic<br>Beds: 12</div>`)[0];
+                popup_07da2c3d48a42ee07b0396dcc882d62e.setContent(html_e5823fecb43ffd0e6167ea17e1daa6fc);
+            
+        
+
+        circle_marker_44b3999ba6e90baae4ef8fe8ae087a0e.bindPopup(popup_07da2c3d48a42ee07b0396dcc882d62e)
+        ;
+
+        
+    
+    
+            var circle_marker_8f69e8bbca37d0990ba2ecaf6a796a02 = L.circleMarker(
+                [23.153877, 77.434855],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_810c8732594dcb579b4968c3f7b7240c = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_b9547964a7198a45004ed1896d017df5 = $(`<div id="html_b9547964a7198a45004ed1896d017df5" style="width: 100.0%; height: 100.0%;"><b>CHC - Khajuri Kalan 65</b><br>Type: CHC<br>Beds: 90</div>`)[0];
+                popup_810c8732594dcb579b4968c3f7b7240c.setContent(html_b9547964a7198a45004ed1896d017df5);
+            
+        
+
+        circle_marker_8f69e8bbca37d0990ba2ecaf6a796a02.bindPopup(popup_810c8732594dcb579b4968c3f7b7240c)
+        ;
+
+        
+    
+    
+            var circle_marker_104709ef6f43556b398d2c09de0d1e6c = L.circleMarker(
+                [23.194844, 77.317155],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_2d86149f32f5d5975d73855a34d14b16 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_a0174d79d9ad754e4cab89ab7ae04337 = $(`<div id="html_a0174d79d9ad754e4cab89ab7ae04337" style="width: 100.0%; height: 100.0%;"><b>Hospital - Phanda 66</b><br>Type: Hospital<br>Beds: 169</div>`)[0];
+                popup_2d86149f32f5d5975d73855a34d14b16.setContent(html_a0174d79d9ad754e4cab89ab7ae04337);
+            
+        
+
+        circle_marker_104709ef6f43556b398d2c09de0d1e6c.bindPopup(popup_2d86149f32f5d5975d73855a34d14b16)
+        ;
+
+        
+    
+    
+            var circle_marker_45b65811874d8c5c3e8e9a43c2e15fff = L.circleMarker(
+                [23.300847, 77.537403],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_bba78f651a77bd4c5ad4d2f67da8b718 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_a2ab3c6ec97ef87fa9be787b2b731e37 = $(`<div id="html_a2ab3c6ec97ef87fa9be787b2b731e37" style="width: 100.0%; height: 100.0%;"><b>Clinic - Phanda 67</b><br>Type: Clinic<br>Beds: 1</div>`)[0];
+                popup_bba78f651a77bd4c5ad4d2f67da8b718.setContent(html_a2ab3c6ec97ef87fa9be787b2b731e37);
+            
+        
+
+        circle_marker_45b65811874d8c5c3e8e9a43c2e15fff.bindPopup(popup_bba78f651a77bd4c5ad4d2f67da8b718)
+        ;
+
+        
+    
+    
+            var circle_marker_f8bd057383ca124e0e9c47c506b174af = L.circleMarker(
+                [23.339551, 77.416258],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_401a1ef3bdd8f3175de40d7467620d0b = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_f72967aa5375cc04d012947b29ba8634 = $(`<div id="html_f72967aa5375cc04d012947b29ba8634" style="width: 100.0%; height: 100.0%;"><b>PHC - Berasia 68</b><br>Type: PHC<br>Beds: 24</div>`)[0];
+                popup_401a1ef3bdd8f3175de40d7467620d0b.setContent(html_f72967aa5375cc04d012947b29ba8634);
+            
+        
+
+        circle_marker_f8bd057383ca124e0e9c47c506b174af.bindPopup(popup_401a1ef3bdd8f3175de40d7467620d0b)
+        ;
+
+        
+    
+    
+            var circle_marker_60e04b370c4c92eb6ee5ad12fa2f615c = L.circleMarker(
+                [23.305558, 77.340941],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_feb2e1b9c683283efe109c692b529b64);
+        
+    
+        var popup_84e56a77513ab458306e1a2779aba96c = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_517f060f570f45ee36007f9e8a612f0c = $(`<div id="html_517f060f570f45ee36007f9e8a612f0c" style="width: 100.0%; height: 100.0%;"><b>Clinic - Obaidullaganj 69</b><br>Type: Clinic<br>Beds: 3</div>`)[0];
+                popup_84e56a77513ab458306e1a2779aba96c.setContent(html_517f060f570f45ee36007f9e8a612f0c);
+            
+        
+
+        circle_marker_60e04b370c4c92eb6ee5ad12fa2f615c.bindPopup(popup_84e56a77513ab458306e1a2779aba96c)
+        ;
+
+        
+    
+</script>
+</html>

@@ -1,0 +1,13 @@
+# ── Data Folders ──────────────────────
+data/
+
+
+# ── Jupyter ───────────────────────────
+.ipynb_checkpoints/
+
+# ── Power BI ──────────────────────────
+*.pbix
+
+# ── OS Files ──────────────────────────
+.DS_Store
+Thumbs.db
