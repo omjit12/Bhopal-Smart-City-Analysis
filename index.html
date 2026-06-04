@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhopal Smart City Intelligence Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.plot.ly/plotly-2.24.1.min.js"></script>
+    <style>
+        /* Precision focus transitions locking simple black borders on inputs */
+        input:focus, textarea:focus, select:focus {
+            outline: none !important;
+            border-color: #000000 !important;
+            box-shadow: none !important;
+        }
+        .page-view { display: none; }
+        .page-view.active { display: block; }
+    </style>
+</head>
+<body class="bg-[#f8f9fa] text-[#1e293b] font-sans antialiased min-h-screen flex">
+
+    <aside class="w-64 bg-[#1e2530] text-white flex flex-col fixed h-full border-r border-gray-200">
+        <div class="p-6 text-center border-b border-gray-700">
+            <h1 class="text-xl font-bold tracking-tight">Bhopal Smart City</h1>
+            <p class="text-xs text-blue-400 font-medium mt-1">Executive Audit Portal</p>
+        </div>
+        <nav class="flex-1 p-4 space-y-2 text-gray-300 font-medium text-sm">
+            <button onclick="switchPage('overview-page')" id="btn-overview-page" class="w-full text-left block p-3 rounded-lg bg-blue-600 text-white shadow-sm sidebar-btn">
+                🏠 Dashboard Overview
+            </button>
+            <button onclick="switchPage('chatbot-page')" id="btn-chatbot-page" class="w-full text-left block p-3 rounded-lg hover:bg-gray-800 transition sidebar-btn">
+                🤖 AI Assistant Chatbot
+            </button>
+            <button onclick="switchPage('analysis-page')" id="btn-analysis-page" class="w-full text-left block p-3 rounded-lg hover:bg-gray-800 transition sidebar-btn">
+                📊 Analysis & Strategy
+            </button>
+        </nav>
+        <footer class="p-4 border-t border-gray-700 text-center text-xs text-gray-400">
+            Built by Om Jitpure
+        </footer>
+    </aside>
+
+    <main class="ml-64 flex-1 p-10 pb-32">
+        
+        <div id="overview-page" class="page-view active">
+            <header class="mb-8">
+                <h2 class="text-3xl font-extrabold text-[#0f172a] tracking-tight">🏙️ City Operations Overview</h2>
+                <p class="text-sm text-gray-500 mt-1">Real-time status tracking of Bhopal's urban delivery pipelines.</p>
+            </header>
+
+            <section class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+                <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm text-center">
+                    <div class="text-3xl font-bold text-[#0f172a]" id="kpi-projects">20%</div>
+                    <div class="text-xs font-semibold text-gray-400 uppercase tracking-wide mt-1">Project Completion</div>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm text-center">
+                    <div class="text-3xl font-bold text-[#0f172a]" id="kpi-aqi">120</div>
+                    <div class="text-xs font-semibold text-gray-400 uppercase tracking-wide mt-1">Average City AQI</div>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm text-center">
+                    <div class="text-3xl font-bold text-[#0f172a]" id="kpi-beds">1.1</div>
+                    <div class="text-xs font-semibold text-gray-400 uppercase tracking-wide mt-1">Beds Per 1000 Pop</div>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm text-center">
+                    <div class="text-3xl font-bold text-[#0f172a]" id="kpi-complaints">63.7%</div>
+                    <div class="text-xs font-semibold text-gray-400 uppercase tracking-wide mt-1">Grievance Resolution</div>
+                </div>
+            </section>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="bg-white p-4 border border-gray-200 rounded-xl shadow-sm h-[380px]">
+                    <div class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2 px-2">📈 Monthly AQI Pattern</div>
+                    <div id="aqi-chart" class="w-full h-[320px]"></div>
+                </div>
+                <div class="bg-white p-4 border border-gray-200 rounded-xl shadow-sm h-[380px]">
+                    <div class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2 px-2">🏥 Healthcare Capacity (Beds per 1000)</div>
+                    <div id="healthcare-chart" class="w-full h-[320px]"></div>
+                </div>
+                <div class="bg-white p-4 border border-gray-200 rounded-xl shadow-sm h-[380px]">
+                    <div class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2 px-2">🏛️ Smart City Project Allocation Status</div>
+                    <div id="projects-chart" class="w-full h-[320px]"></div>
+                </div>
+                <div class="bg-white p-4 border border-gray-200 rounded-xl shadow-sm h-[380px]">
+                    <div class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2 px-2">📋 Grievance Management Summary by Zone</div>
+                    <div id="complaints-chart" class="w-full h-[320px]"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="chatbot-page" class="page-view">
+            <header class="mb-8">
+                <h2 class="text-3xl font-extrabold text-[#0f172a] tracking-tight">🤖 AI Data Assistant Chatbot</h2>
+                <p class="text-sm text-gray-500 mt-1">Ask questions about civic databases in natural conversational English.</p>
+            </header>
+
+            <div class="bg-white border border-gray-200 rounded-xl shadow-sm p-6 min-h-[450px] mb-6 flex flex-col justify-between">
+                <div class="flex-1 space-y-4 text-sm overflow-y-auto max-h-[400px]" id="chat-viewport">
+                    <div class="bg-gray-100 border border-gray-200 rounded-lg p-3 max-w-[75%]">
+                        Hello! Ask me any structural questions regarding the smart city data records.
+                    </div>
+                </div>
+            </div>
+
+            <div class="fixed bottom-0 right-0 left-64 bg-[#f8f9fa] border-t border-gray-200 p-4">
+                <div class="max-w-4xl mx-auto flex items-center space-x-3">
+                    <input type="text" id="chat-input" placeholder="Ask anything about Bhopal's data..." 
+                           class="flex-1 bg-white border border-gray-300 rounded-lg px-4 py-3 text-sm transition-colors duration-150 focus:border-black">
+                    <button onclick="sendMessage()" class="bg-blue-600 text-white font-semibold text-sm px-5 py-3 rounded-lg hover:bg-blue-700 transition">
+                        Send Message
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="analysis-page" class="page-view">
+            <header class="mb-8">
+                <h2 class="text-3xl font-extrabold text-[#0f172a] tracking-tight">📊 Strategic Analysis & Recommendations</h2>
+                <p class="text-sm text-gray-500 mt-1">Deep-dive algorithmic audits and automated policy strategy reports.</p>
+            </header>
+
+            <div class="mb-6 max-w-md bg-white p-4 border border-gray-200 rounded-lg shadow-sm">
+                <label class="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">Select Target Analysis Dimension</label>
+                <select id="analysis-module-select" class="w-full bg-white border border-gray-300 text-sm rounded-md px-3 py-2 transition-colors cursor-pointer focus:border-black">
+                    <option value="Smart City Delivery">🏛️ Smart City Project Delivery</option>
+                    <option value="Environment & Lakes">🌿 Environmental Air Quality & Lakes</option>
+                    <option value="Healthcare Access">🏥 Healthcare Distribution Architecture</option>
+                    <option value="Citizen Grievances">📋 Citizen Grievance Resolutions</option>
+                </select>
+                <button onclick="runModuleAnalysis()" class="mt-4 w-full bg-blue-600 text-white font-semibold text-sm py-2 rounded-md hover:bg-blue-700 transition">
+                    ✨ Generate Strategy Report
+                </button>
+            </div>
+
+            <div class="bg-white border border-gray-200 rounded-xl shadow-sm p-6 min-h-[250px]">
+                <h3 class="text-md font-bold text-[#0f172a] border-b border-gray-100 pb-2 mb-4" id="report-title">📋 Module Report Status</h3>
+                <div class="text-sm text-gray-600 leading-relaxed" id="report-viewport">
+                    Select a dashboard page dimension above and trigger the insights engine to compute a structural evaluation report.
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        const BACKEND_URL = "http://127.0.0.1:8000";
+
+        function switchPage(pageId) {
+            const pages = document.querySelectorAll('.page-view');
+            pages.forEach(p => p.classList.remove('active'));
+            document.getElementById(pageId).classList.add('active');
+
+            const buttons = document.querySelectorAll('.sidebar-btn');
+            buttons.forEach(b => {
+                b.classList.remove('bg-blue-600', 'text-white', 'shadow-sm');
+                b.classList.add('hover:bg-gray-800', 'transition');
+            });
+
+            const activeBtn = document.getElementById(`btn-${pageId}`);
+            activeBtn.classList.remove('hover:bg-gray-800', 'transition');
+            activeBtn.classList.add('bg-blue-600', 'text-white', 'shadow-sm');
+            
+            if(pageId === 'overview-page') {
+                Plotly.Plots.resize('aqi-chart');
+                Plotly.Plots.resize('healthcare-chart');
+                Plotly.Plots.resize('projects-chart');
+                Plotly.Plots.resize('complaints-chart');
+            }
+        }
+        // Strategic Audit Engine Integration
+        async function runAudit() {
+            const module = document.getElementById('analysis-select').value;
+            const outputDiv = document.getElementById('report-output');
+            outputDiv.innerText = "Analyzing data...";
+
+            const res = await fetch(`${BACKEND_URL}/api/analysis/report`, {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({ module: module })
+            });
+
+            const data = await res.json();
+            
+            // If the backend returns { "response": "..." }, this accesses it
+            // If the backend returns raw text, this falls back to the raw data
+            outputDiv.innerText = data.response || data;
+        }
+        async function loadCharts() {
+            const chartConfig = { responsive: true, displayModeBar: false };
+            const layoutTemplate = {
+                paper_bgcolor: 'rgba(0,0,0,0)', plot_bgcolor: 'rgba(0,0,0,0)',
+                font: { color: '#475569', family: 'Inter, sans-serif', size: 11 },
+                margin: { l: 40, r: 15, t: 15, b: 40 },
+                xaxis: { showgrid: true, gridcolor: '#f1f5f9' },
+                yaxis: { showgrid: true, gridcolor: '#f1f5f9' }
+            };
+
+            // 1. Render AQI Chart
+            try {
+                const resA = await fetch(`${BACKEND_URL}/api/charts/aqi`);
+                const dataA = await resA.json();
+                const traceA = {
+                    x: dataA.months, y: dataA.aqi_values, type: 'bar',
+                    marker: { color: dataA.aqi_values.map(v => v > 150 ? '#ef4444' : v > 100 ? '#f59e0b' : '#3b82f6') }
+                };
+                document.getElementById('aqi-chart').innerHTML = '';
+                Plotly.newPlot('aqi-chart', [traceA], { ...layoutTemplate }, chartConfig);
+            } catch (e) { console.log("AQI graph issue."); }
+
+            // 2. Render Healthcare Chart (FIXED X-AXIS BASELINE RANGE)
+            try {
+                const resB = await fetch(`${BACKEND_URL}/api/charts/healthcare`);
+                const dataB = await resB.json();
+                const traceB = {
+                    x: dataB.beds_ratio, y: dataB.zones, type: 'bar', orientation: 'h',
+                    marker: { color: dataB.beds_ratio.map(v => v < 1.0 ? '#ef4444' : '#3b82f6') }
+                };
+                
+                // CRITICAL FIX: Explicitly forcing 'range: [0, 2.5]' so Old Bhopal's bar (0.65) isn't clipped out by the axis border walls
+                let horizLayout = { 
+                    ...layoutTemplate, 
+                    margin: { l: 90, r: 25, t: 15, b: 40 }, 
+                    xaxis: { showgrid: true, gridcolor: '#f1f5f9', range: [0, 2.5] },
+                    yaxis: { showgrid: false } 
+                };
+                document.getElementById('healthcare-chart').innerHTML = '';
+                Plotly.newPlot('healthcare-chart', [traceB], horizLayout, chartConfig);
+            } catch (e) { console.log("Healthcare graph issue."); }
+
+            // 3. Render Projects Allocation Donut Chart
+            try {
+                const resC = await fetch(`${BACKEND_URL}/api/charts/projects`);
+                const dataC = await resC.json();
+                const traceC = {
+                    labels: dataC.statuses, values: dataC.counts, type: 'pie', hole: 0.45,
+                    marker: { colors: ['#3b82f6', '#f59e0b', '#ef4444', '#94a3b8'] },
+                    textinfo: 'label+percent', textposition: 'inside'
+                };
+                let pieLayout = { ...layoutTemplate, margin: { l: 15, r: 15, t: 15, b: 15 }, showlegend: false };
+                document.getElementById('projects-chart').innerHTML = '';
+                Plotly.newPlot('projects-chart', [traceC], pieLayout, chartConfig);
+            } catch (e) { console.log("Projects graph issue."); }
+
+            // 4. Render Complaints Dual Grouped Bar Chart
+            try {
+                const resD = await fetch(`${BACKEND_URL}/api/charts/complaints`);
+                const dataD = await resD.json();
+                const traceTotal = { x: dataD.zones, y: dataD.total_complaints, name: 'Total Raised', type: 'bar', marker: { color: '#94a3b8' } };
+                const traceResolved = { x: dataD.zones, y: dataD.resolved_complaints, name: 'Resolved', type: 'bar', marker: { color: '#3b82f6' } };
+                let groupedLayout = { ...layoutTemplate, barmode: 'group', legend: { orientation: 'h', x: 0, y: -0.2 } };
+                document.getElementById('complaints-chart').innerHTML = '';
+                Plotly.newPlot('complaints-chart', [traceTotal, traceResolved], groupedLayout, chartConfig);
+            } catch (e) { console.log("Complaints graph issue."); }
+        }
+
+        async function sendMessage() {
+            const input = document.getElementById('chat-input');
+            const viewport = document.getElementById('chat-viewport');
+            if(!input.value.trim()) return;
+
+            viewport.innerHTML += `<div class="bg-blue-50 border border-blue-100 rounded-lg p-3 max-w-[75%] ml-auto text-[#1e40af] font-medium">${input.value}</div>`;
+            const msg = input.value;
+            input.value = '';
+
+            try {
+                const res = await fetch(`${BACKEND_URL}/api/chat`, {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({ message: msg })
+                });
+                const data = await res.json();
+                viewport.innerHTML += `<div class="bg-gray-50 border border-gray-200 text-gray-700 rounded-lg p-3 max-w-[80%] whitespace-pre-wrap">${data.response}</div>`;
+            } catch(err) {
+                viewport.innerHTML += `<div class="bg-red-50 text-red-700 border border-red-100 rounded-lg p-3 max-w-[75%] font-medium">Connection to API endpoint lost.</div>`;
+            }
+        }
+
+        async function runModuleAnalysis() {
+            const selectedModule = document.getElementById('analysis-module-select').value;
+            const titleField = document.getElementById('report-title');
+            const viewport = document.getElementById('report-viewport');
+
+            titleField.innerText = `🔄 Analyzing ${selectedModule}...`;
+            viewport.innerHTML = `<span class="text-gray-400 animate-pulse font-medium">Querying database engine and evaluating metrics...</span>`;
+
+            try {
+                const res = await fetch(`${BACKEND_URL}/api/chat`, {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({ message: `Generate a professional, structured executive insight report for the module: ${selectedModule}. Cover key findings, risks, and recommendations.` })
+                });
+                const data = await res.json();
+                titleField.innerText = `📊 Strategic Audit Report: ${selectedModule}`;
+                viewport.innerHTML = `<div class="bg-blue-50/50 border border-blue-100 text-gray-700 rounded-lg p-5 font-normal leading-relaxed whitespace-pre-wrap">${data.response}</div>`;
+            } catch (err) {
+                titleField.innerText = `⚠️ Connection Error`;
+                viewport.innerHTML = `<span class="text-red-500 font-medium">Failed to establish communication link with backend endpoints.</span>`;
+            }
+        }
+
+        async function initDashboard() {
+            try {
+                const res = await fetch(`${BACKEND_URL}/api/overview`);
+                const data = await res.json();
+                if(data.status === "Success") {
+                    document.getElementById('kpi-projects').innerText = data.project_completion;
+                    document.getElementById('kpi-aqi').innerText = data.avg_city_aqi;
+                    document.getElementById('kpi-beds').innerText = data.beds_available;
+                    document.getElementById('kpi-complaints').innerText = data.grievance_resolution;
+                }
+            } catch (err) { console.log("Backend offline."); }
+            loadCharts();
+        }
+        window.onload = initDashboard;
+    </script>
+</body>
+</html>
